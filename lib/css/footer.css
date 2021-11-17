@@ -1,0 +1,78 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-legal-footer{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  text-align:center;
+  width:100%;
+  padding:11px 0;
+  font-size:12px; }
+  .iui-legal-footer > ul{
+    list-style-type:none;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap; }
+    .iui-legal-footer > ul > li{
+      display:inline-block;
+      -webkit-user-select:none;
+         -moz-user-select:none;
+          -ms-user-select:none;
+              user-select:none;
+      white-space:nowrap;
+      word-break:keep-all;
+      color:rgba(0, 0, 0, 0.4);
+      color:var(--iui-text-color-muted); }
+      .iui-legal-footer > ul > li .iui-separator{
+        margin:0 8px;
+        width:1px;
+        height:11px;
+        display:inline-table;
+        background-color:rgba(0, 0, 0, 0.4);
+        background-color:var(--iui-text-color-muted); }
+      .iui-legal-footer > ul > li > a{
+        text-decoration:none;
+        cursor:pointer;
+        color:#008BE1;
+        color:var(--iui-color-foreground-primary); }
+        .iui-legal-footer > ul > li > a:focus{
+          outline:0;
+          box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+          box-shadow:var(--iui-focus-box-shadow); }
+        .iui-legal-footer > ul > li > a:focus:not(:focus-visible){
+          box-shadow:none; }
+        .iui-legal-footer > ul > li > a:focus-visible{
+          outline:0;
+          box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+          box-shadow:var(--iui-focus-box-shadow); }
+        .iui-legal-footer > ul > li > a:hover{
+          color:#006bae;
+          color:var(--iui-color-foreground-primary-overlay);
+          text-decoration:underline; }
+        .iui-legal-footer > ul > li > a:focus{
+          outline:0;
+          box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+          box-shadow:var(--iui-focus-box-shadow); }
+        .iui-legal-footer > ul > li > a:focus:not(:focus-visible){
+          box-shadow:none; }
+        .iui-legal-footer > ul > li > a:focus-visible{
+          outline:0;
+          box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+          box-shadow:var(--iui-focus-box-shadow); }
+        .iui-legal-footer > ul > li > a, .iui-legal-footer > ul > li > a:hover{
+          color:rgba(0, 0, 0, 0.4);
+          color:var(--iui-text-color-muted); }
+  .iui-legal-footer > .iui-legal-footer-developer{
+    display:block;
+    -webkit-user-select:all;
+       -moz-user-select:all;
+            user-select:all;
+    color:rgba(0, 0, 0, 0.4);
+    color:var(--iui-text-color-muted); }

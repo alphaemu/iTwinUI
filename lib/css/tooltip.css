@@ -1,0 +1,52 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-tooltip-container{
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
+  width:fit-content;
+  height:-webkit-fit-content;
+  height:-moz-fit-content;
+  height:fit-content;
+  position:relative; }
+  .iui-tooltip-container > .iui-tooltip{
+    position:absolute;
+    visibility:hidden;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    opacity:0; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-tooltip-container > .iui-tooltip{
+        transition:visibility 0s linear 0.2s, opacity 0.2s ease-out; } }
+  .iui-tooltip-container > .iui-tooltip.iui-tooltip-visible,
+  .iui-tooltip-container:hover > .iui-tooltip{
+    visibility:visible;
+    opacity:1; }
+
+.iui-tooltip{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:block;
+  text-align:center;
+  border-radius:3px;
+  font-size:12px;
+  overflow:hidden;
+  max-width:400px;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+  overflow-wrap:break-word;
+  box-sizing:content-box;
+  padding:4px 8px;
+  z-index:999;
+  box-shadow:0 3px 14px rgba(0, 0, 0, 0.25);
+  pointer-events:none;
+  background-color:rgba(0, 0, 0, 0.6);
+  color:#FFF;
+  background-color:rgba(0, 0, 0, var(--iui-opacity-3));
+  color:var(--iui-color-foreground-accessory); }

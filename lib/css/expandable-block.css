@@ -1,0 +1,159 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-expandable-block{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+  width:100%;
+  background-color:#FFF;
+  background-color:var(--iui-color-background-1); }
+  .iui-expandable-block > .iui-header{
+    display:flex;
+    align-items:center;
+    padding:11px 12px;
+    cursor:pointer;
+    box-sizing:border-box;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    border:1px solid #EEF0F3;
+    border-bottom-color:#DCE0E3;
+    background-color:#EEF0F3;
+    border:1px solid var(--iui-color-background-3);
+    border-bottom-color:var(--iui-color-background-4);
+    background-color:var(--iui-color-background-3); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-expandable-block > .iui-header{
+        transition:background-color 0.2s ease-out; } }
+    .iui-expandable-block > .iui-header > .iui-icon,
+    .iui-expandable-block > .iui-header > .iui-status-icon{
+      display:inline-flex;
+      flex-shrink:0;
+      width:16px;
+      height:16px; }
+    .iui-expandable-block > .iui-header > .iui-icon{
+      fill:rgba(0, 0, 0, 0.8);
+      fill:var(--iui-icons-color-actionable); }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-expandable-block > .iui-header > .iui-icon{
+          transition:transform 0.2s ease-out; } }
+    .iui-expandable-block > .iui-header > .iui-status-icon{
+      margin-left:12px;
+      fill:rgba(0, 0, 0, 0.4);
+      fill:var(--iui-icons-color); }
+      .iui-expandable-block > .iui-header > .iui-status-icon.iui-informational{
+        fill:#008BE1;
+        fill:var(--iui-icons-color-primary); }
+      .iui-expandable-block > .iui-header > .iui-status-icon.iui-positive{
+        fill:#53A21A;
+        fill:var(--iui-icons-color-positive); }
+      .iui-expandable-block > .iui-header > .iui-status-icon.iui-warning{
+        fill:#F18B12;
+        fill:var(--iui-icons-color-warning); }
+      .iui-expandable-block > .iui-header > .iui-status-icon.iui-negative{
+        fill:#D30A0A;
+        fill:var(--iui-icons-color-negative); }
+    .iui-expandable-block > .iui-header .iui-expandable-block-label{
+      display:flex;
+      flex-direction:column;
+      flex:auto;
+      min-width:0;
+      margin-left:12px;
+      color:rgba(0, 0, 0, 0.8);
+      color:var(--iui-text-color); }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-expandable-block > .iui-header .iui-expandable-block-label{
+          transition:color 0.2s ease; } }
+    .iui-expandable-block > .iui-header .iui-title,
+    .iui-expandable-block > .iui-header .iui-caption{
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis; }
+    .iui-expandable-block > .iui-header .iui-title{
+      font-size:16px; }
+    .iui-expandable-block > .iui-header .iui-caption{
+      font-size:12px;
+      color:rgba(0, 0, 0, 0.4);
+      color:var(--iui-text-color-muted); }
+    .iui-expandable-block > .iui-header:focus{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-expandable-block > .iui-header:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-expandable-block > .iui-header:focus-visible{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+  .iui-expandable-block .iui-expandable-content{
+    overflow:hidden;
+    box-sizing:border-box;
+    border-bottom:1px solid #DCE0E3;
+    border-right:1px solid #DCE0E3;
+    border-left:1px solid #DCE0E3;
+    border-bottom:1px solid var(--iui-color-background-4);
+    border-right:1px solid var(--iui-color-background-4);
+    border-left:1px solid var(--iui-color-background-4); }
+    .iui-expandable-block .iui-expandable-content.iui-enter{
+      opacity:0; }
+    .iui-expandable-block .iui-expandable-content.iui-enter-active{
+      opacity:1; }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-expandable-block .iui-expandable-content.iui-enter-active{
+          transition:opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out; } }
+    .iui-expandable-block .iui-expandable-content.iui-exit{
+      opacity:1; }
+    .iui-expandable-block .iui-expandable-content.iui-exit-active{
+      opacity:0; }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-expandable-block .iui-expandable-content.iui-exit-active{
+          transition:opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out; } }
+    .iui-expandable-block .iui-expandable-content > div{
+      padding:11px 12px; }
+  .iui-expandable-block:hover > .iui-header{
+    background-color:#DCE0E3;
+    background-color:var(--iui-color-background-4); }
+    .iui-expandable-block:hover > .iui-header > .iui-icon{
+      fill:black;
+      fill:var(--iui-icons-color-actionable-hover); }
+    .iui-expandable-block:hover > .iui-header .iui-caption,
+    .iui-expandable-block:hover > .iui-header .iui-title{
+      color:#000;
+      color:var(--iui-color-foreground-body); }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-expandable-block:hover > .iui-header .iui-caption,
+        .iui-expandable-block:hover > .iui-header .iui-title{
+          transition:color 0.2s ease; } }
+  .iui-expandable-block.iui-expanded > .iui-header{
+    background-color:#EEF0F3;
+    border-left:1px solid #DCE0E3;
+    border-top:1px solid #DCE0E3;
+    border-right:1px solid #DCE0E3;
+    background-color:var(--iui-color-background-3);
+    border-left:1px solid var(--iui-color-background-4);
+    border-top:1px solid var(--iui-color-background-4);
+    border-right:1px solid var(--iui-color-background-4); }
+    .iui-expandable-block.iui-expanded > .iui-header:hover{
+      background-color:#DCE0E3;
+      background-color:var(--iui-color-background-4); }
+    .iui-expandable-block.iui-expanded > .iui-header:hover{
+      background-color:#DCE0E3;
+      background-color:var(--iui-color-background-4); }
+    .iui-expandable-block.iui-expanded > .iui-header > .iui-icon{
+      transform:rotate(90deg); }
+  .iui-expandable-block.iui-small .iui-header{
+    padding:5.5px 8px; }
+    .iui-expandable-block.iui-small .iui-header > .iui-icon{
+      width:12px;
+      height:12px; }
+    .iui-expandable-block.iui-small .iui-header > .iui-expandable-block-label{
+      margin-left:8px; }
+    .iui-expandable-block.iui-small .iui-header > .iui-status-icon{
+      margin-left:8px; }

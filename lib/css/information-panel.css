@@ -1,0 +1,157 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-information-panel-wrapper{
+  position:relative;
+  overflow:hidden; }
+
+.iui-information-panel{
+  position:absolute;
+  opacity:0;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+  max-width:100%;
+  max-height:100%;
+  z-index:2;
+  background-color:#FFF;
+  background-color:var(--iui-color-background-1); }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-information-panel{
+      transition:transform 0.2s ease-out, opacity 0.2s ease; } }
+  .iui-information-panel > .iui-resizer{
+    display:none;
+    position:absolute;
+    touch-action:none; }
+    .iui-information-panel > .iui-resizer > .iui-resizer-bar{
+      background-color:#C7CCD1;
+      background-color:var(--iui-color-background-5); }
+    .iui-information-panel > .iui-resizer:hover > .iui-resizer-bar{
+      background-color:#008BE1;
+      background-color:var(--iui-color-foreground-primary); }
+  .iui-information-panel .iui-information-header,
+  .iui-information-panel .iui-information-body{
+    padding-left:12px;
+    padding-right:12px;
+    box-sizing:border-box; }
+  .iui-information-panel .iui-information-header{
+    height:55px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:#EEF0F3;
+    background-color:var(--iui-color-background-3); }
+    .iui-information-panel .iui-information-header .iui-information-header-label{
+      display:flex;
+      align-items:center;
+      overflow:hidden; }
+      .iui-information-panel .iui-information-header .iui-information-header-label > *{
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        -webkit-user-select:all;
+           -moz-user-select:all;
+                user-select:all; }
+      .iui-information-panel .iui-information-header .iui-information-header-label svg{
+        display:flex;
+        width:24px;
+        height:24px;
+        margin-right:8px;
+        flex-shrink:0;
+        fill:rgba(0, 0, 0, 0.4);
+        fill:var(--iui-icons-color); }
+    .iui-information-panel .iui-information-header .iui-information-header-actions{
+      flex-shrink:0;
+      margin-left:8px; }
+  .iui-information-panel .iui-information-body{
+    padding-top:11px;
+    padding-bottom:11px;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overflow-y:overlay; }
+    .iui-information-panel .iui-information-body > hr{
+      border-color:#DCE0E3;
+      border-color:var(--iui-color-background-4); }
+  .iui-information-panel.iui-right{
+    top:0;
+    right:0;
+    width:384px;
+    min-width:192px;
+    height:100%;
+    transform:translateX(100%);
+    box-shadow:-1px 0 14px rgba(0, 0, 0, 0.25);
+    -webkit-clip-path:inset(0 0 0 -15px);
+            clip-path:inset(0 0 0 -15px); }
+    .iui-information-panel.iui-right > .iui-resizer{
+      height:100%;
+      width:16px;
+      top:0;
+      cursor:ew-resize;
+      justify-content:center; }
+      .iui-information-panel.iui-right > .iui-resizer > .iui-resizer-bar{
+        height:100%;
+        width:1px; }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-information-panel.iui-right > .iui-resizer > .iui-resizer-bar{
+            transition:background-color 0.2s ease-out, width 0.2s ease-out; } }
+      .iui-information-panel.iui-right > .iui-resizer:hover > .iui-resizer-bar{
+        width:4px; }
+    .iui-information-panel.iui-right > .iui-resizer{
+      left:-8px; }
+  .iui-information-panel.iui-bottom{
+    left:0;
+    bottom:0;
+    height:384px;
+    min-height:192px;
+    width:100%;
+    transform:translateY(100%);
+    box-shadow:0 -1px 14px rgba(0, 0, 0, 0.25);
+    -webkit-clip-path:inset(-15px 0 0 0);
+            clip-path:inset(-15px 0 0 0); }
+    .iui-information-panel.iui-bottom > .iui-resizer{
+      width:100%;
+      height:16px;
+      left:0;
+      cursor:ns-resize;
+      align-items:center; }
+      .iui-information-panel.iui-bottom > .iui-resizer > .iui-resizer-bar{
+        width:100%;
+        height:1px; }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-information-panel.iui-bottom > .iui-resizer > .iui-resizer-bar{
+            transition:background-color 0.2s ease-out, height 0.2s ease-out; } }
+      .iui-information-panel.iui-bottom > .iui-resizer:hover > .iui-resizer-bar{
+        height:4px; }
+    .iui-information-panel.iui-bottom > .iui-resizer{
+      top:-8px; }
+  .iui-information-panel.iui-visible{
+    opacity:1;
+    transform:translate(0); }
+    .iui-information-panel.iui-visible > .iui-resizer{
+      display:flex; }
+
+.iui-information-body-content{
+  display:-ms-grid;
+  display:grid; }
+  .iui-information-body-content .iui-input-label{
+    font-weight:400;
+    color:rgba(0, 0, 0, 0.4);
+    color:var(--iui-text-color-muted); }
+  .iui-information-body-content:not(.iui-inline) > *:nth-child(even):not(:last-child){
+    margin-bottom:11px; }
+  .iui-information-body-content.iui-inline{
+    row-gap:11px;
+    -ms-grid-columns:auto 1fr;
+    grid-template-columns:auto 1fr;
+    align-items:center; }
+    .iui-information-body-content.iui-inline .iui-input-label{
+      margin:0 16px 0 0;
+      -ms-grid-column-span:1;
+      -ms-grid-column-align:end;
+          justify-self:end;
+      text-align:end; }
+      .iui-information-body-content.iui-inline .iui-input-label.iui-required{
+        margin-right:6px; }

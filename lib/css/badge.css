@@ -1,0 +1,26 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-badge{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-block;
+  font-size:12px;
+  padding:0 6px;
+  margin:6px 0;
+  border-radius:3px;
+  background-color:var(--badge-color, #C7CCD1);
+  color:var(--badge-text-color, rgba(0, 0, 0, 0.6));
+  text-transform:uppercase;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  max-width:20ch;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-weight:600; }

@@ -1,0 +1,130 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-toggle-switch{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:flex;
+  align-items:center;
+  font-size:14px;
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
+  width:fit-content;
+  padding:5.5px 0;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  cursor:pointer;
+  position:relative;
+  color:rgba(0, 0, 0, 0.8);
+  color:rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-2)); }
+  .iui-toggle-switch > input{
+    width:0;
+    height:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+    opacity:0;
+    position:absolute; }
+    .iui-toggle-switch > input ~ .iui-toggle{
+      display:block;
+      position:relative;
+      height:20px;
+      width:38px;
+      border-radius:11px;
+      background-color:#FFF;
+      border:1px solid rgba(0, 0, 0, 0.4);
+      background-color:var(--iui-color-background-1);
+      border:1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4)); }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-toggle-switch > input ~ .iui-toggle{
+          transition:background-color 0.2s ease, border-color 0.2s ease; } }
+      .iui-toggle-switch > input ~ .iui-toggle > .iui-icon{
+        opacity:0;
+        width:12px;
+        height:12px;
+        display:inline-block;
+        position:relative;
+        left:4px;
+        fill:#FFF;
+        fill:var(--iui-color-foreground-accessory); }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-toggle-switch > input ~ .iui-toggle > .iui-icon{
+            transition:opacity 0.2s ease; } }
+      .iui-toggle-switch > input ~ .iui-toggle > .iui-handle{
+        position:absolute;
+        height:16px;
+        width:16px;
+        top:50%;
+        transform:translateY(-50%);
+        right:20px;
+        border-radius:50%;
+        background-color:#000;
+        opacity:0.8;
+        background-color:var(--iui-color-foreground-body);
+        opacity:var(--iui-opacity-2); }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-toggle-switch > input ~ .iui-toggle > .iui-handle{
+            transition:right 0.2s ease, background-color 0.2s ease, opacity 0.2s ease; } }
+    .iui-toggle-switch > input:hover:not(:disabled) ~ .iui-toggle, .iui-toggle-switch > input:focus ~ .iui-toggle{
+      border:1px solid rgba(0, 0, 0, 0.8);
+      border:1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-2)); }
+      .iui-toggle-switch > input:hover:not(:disabled) ~ .iui-toggle > .iui-handle, .iui-toggle-switch > input:focus ~ .iui-toggle > .iui-handle{
+        opacity:1;
+        opacity:var(--iui-opacity-1); }
+    .iui-toggle-switch > input:checked ~ .iui-toggle{
+      background-color:#008BE1;
+      border-color:#008BE1;
+      background-color:var(--iui-color-background-primary);
+      border-color:var(--iui-color-background-primary); }
+      .iui-toggle-switch > input:checked ~ .iui-toggle > .iui-icon{
+        opacity:1;
+        opacity:var(--iui-opacity-1); }
+      .iui-toggle-switch > input:checked ~ .iui-toggle > .iui-handle{
+        background-color:#FFF;
+        opacity:0.8;
+        background-color:var(--iui-color-foreground-accessory);
+        opacity:var(--iui-opacity-2);
+        right:2px; }
+    .iui-toggle-switch > input:checked:hover:not(:disabled) ~ .iui-toggle, .iui-toggle-switch > input:checked:focus ~ .iui-toggle{
+      border-color:#008BE1;
+      border-color:var(--iui-color-background-primary); }
+      .iui-toggle-switch > input:checked:hover:not(:disabled) ~ .iui-toggle > .iui-handle, .iui-toggle-switch > input:checked:focus ~ .iui-toggle > .iui-handle{
+        opacity:1;
+        opacity:var(--iui-opacity-1); }
+    .iui-toggle-switch > input:disabled ~ .iui-toggle{
+      cursor:not-allowed;
+      background-color:#EEF0F3;
+      border-color:#EEF0F3;
+      background-color:var(--iui-color-background-disabled);
+      border-color:var(--iui-color-background-disabled); }
+      .iui-toggle-switch > input:disabled ~ .iui-toggle > .iui-handle{
+        background-color:#000;
+        opacity:0.2;
+        background-color:var(--iui-color-foreground-body);
+        opacity:var(--iui-opacity-5); }
+      .iui-toggle-switch > input:disabled ~ .iui-toggle > .iui-icon{
+        fill:rgba(0, 0, 0, 0.8);
+        fill:var(--iui-icons-color-actionable);
+        opacity:0; }
+    .iui-toggle-switch > input:disabled ~ .iui-label{
+      cursor:not-allowed;
+      color:rgba(0, 0, 0, 0.4);
+      color:var(--iui-text-color-muted); }
+    .iui-toggle-switch > input:disabled:checked ~ .iui-toggle > .iui-icon{
+      opacity:0.2;
+      opacity:var(--iui-opacity-5); }
+    .iui-toggle-switch > input:enabled:focus ~ .iui-toggle{
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+  .iui-toggle-switch.iui-disabled{
+    cursor:not-allowed; }
+  .iui-toggle-switch > .iui-label{
+    margin-right:8px; }
+  .iui-toggle-switch .iui-toggle ~ .iui-label{
+    margin-left:8px;
+    margin-right:0; }

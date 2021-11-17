@@ -1,0 +1,35 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-keyboard{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  border-radius:3px;
+  display:inline-block;
+  font-size:12px;
+  font-weight:600;
+  font-family:ui-monospace, Menlo, "Segoe UI Mono", Consolas, "Roboto Mono", "Courier New", monospace;
+  line-height:1;
+  padding:4px 8px;
+  white-space:nowrap;
+  text-transform:uppercase;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  cursor:default;
+  background-color:#FFF;
+  border:1px solid #C7CCD1;
+  box-shadow:0 1px 1px #C7CCD1, 0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  background-color:var(--iui-color-background-1);
+  border:1px solid var(--iui-color-background-5);
+  box-shadow:0 1px 1px var(--iui-color-background-5), 0 1px 0 0 rgba(255, 255, 255, var(--iui-opacity-5)) inset; }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-keyboard{
+      transition:box-shadow 0.2s ease-out; } }
+  .iui-keyboard:hover{
+    box-shadow:0 0 0 #C7CCD1, 0 0 0 0 rgba(255, 255, 255, 0.2) inset;
+    box-shadow:0 0 0 var(--iui-color-background-5), 0 0 0 0 rgba(255, 255, 255, var(--iui-opacity-5)) inset; }

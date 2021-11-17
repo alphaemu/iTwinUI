@@ -1,0 +1,118 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-menu{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  box-shadow:0 1px 5px rgba(0, 0, 0, 0.25);
+  background-color:#FFF;
+  color:rgba(0, 0, 0, 0.8);
+  background-color:var(--iui-color-background-1);
+  color:var(--iui-text-color);
+  list-style-type:none;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  width:100%;
+  margin:0;
+  padding:0; }
+  .iui-menu .iui-header-menu-icon{
+    margin:0 4px; }
+  .iui-menu div.iui-header-menu-icon{
+    margin:0;
+    width:24px;
+    height:24px;
+    border-radius:3px; }
+  .iui-menu.iui-scroll{
+    overflow-y:auto;
+    overflow-y:overlay; }
+
+.iui-menu-item{
+  display:flex;
+  align-items:center;
+  font-size:14px;
+  padding:0 13px;
+  height:38px;
+  cursor:pointer;
+  box-sizing:border-box;
+  line-height:normal; }
+  .iui-menu-item + .iui-menu-item{
+    margin-top:-1px; }
+  .iui-menu-item .iui-content,
+  .iui-menu-item .iui-menu-label,
+  .iui-menu-item .iui-menu-description{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis; }
+  .iui-menu-item .iui-content{
+    flex:1 1 auto; }
+    .iui-menu-item .iui-content + .iui-icon{
+      margin-right:0;
+      margin-left:8px; }
+  .iui-menu-item .iui-menu-description{
+    display:none;
+    font-size:12px;
+    opacity:0.6;
+    opacity:var(--iui-opacity-3); }
+  .iui-menu-item > .iui-icon{
+    width:16px;
+    height:16px;
+    flex:0 0 auto;
+    fill:rgba(0, 0, 0, 0.8);
+    fill:var(--iui-icons-color-actionable); }
+    .iui-menu-item > .iui-icon + .iui-content{
+      margin-left:8px; }
+  .iui-menu-item:hover{
+    background-color:rgba(0, 139, 225, 0.1);
+    background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+  .iui-menu-item:focus, .iui-menu-item.iui-focused{
+    outline:thin solid var(--iui-color-foreground-primary);
+    outline-offset:-1px;
+    outline:thin solid var(--iui-color-foreground-primary);
+    outline-offset:-1px; }
+  .iui-menu-item:focus:not(:focus-visible){
+    outline:none; }
+  .iui-menu-item.iui-large{
+    height:49px; }
+    .iui-menu-item.iui-large .iui-menu-description{
+      display:block; }
+  .iui-menu-item.iui-active, .iui-menu-item.iui-active:hover{
+    background-color:rgba(0, 139, 225, 0.2);
+    outline:thin solid var(--iui-color-foreground-primary);
+    outline-offset:-1px;
+    background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-5));
+    outline:thin solid var(--iui-color-foreground-primary);
+    outline-offset:-1px; }
+  .iui-menu-item.iui-active > .iui-icon{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-menu-item.iui-active:focus, .iui-menu-item.iui-active.iui-focused{
+    outline-width:2px;
+    outline-offset:-2px; }
+  .iui-menu-item.iui-active:focus:not(:focus-visible){
+    outline:thin solid var(--iui-color-foreground-primary);
+    outline-offset:-1px; }
+  .iui-menu-item.iui-disabled, .iui-menu-item.iui-disabled:hover{
+    cursor:not-allowed;
+    outline:none;
+    background-color:#FFF;
+    color:rgba(0, 0, 0, 0.2);
+    background-color:var(--iui-color-background-1);
+    color:var(--iui-text-color-placeholder); }
+    .iui-menu-item.iui-disabled > .iui-icon, .iui-menu-item.iui-disabled:hover > .iui-icon{
+      fill:rgba(0, 0, 0, 0.2);
+      fill:var(--iui-icons-color-actionable-disabled); }
+
+.iui-menu-content{
+  padding:11px 13px; }
+
+.iui-menu-divider{
+  height:1px;
+  width:calc(100% - 24px);
+  margin:1px auto;
+  background-color:#DCE0E3;
+  background-color:var(--iui-color-background-4); }

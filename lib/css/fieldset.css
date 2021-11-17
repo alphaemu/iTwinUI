@@ -1,0 +1,32 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-fieldset{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  padding:11px 12px;
+  border-radius:3px;
+  border:1px solid #DCE0E3;
+  background-color:#FFF;
+  border:1px solid var(--iui-color-background-4);
+  background-color:var(--iui-color-background-1); }
+  .iui-fieldset legend{
+    font-size:16px;
+    padding:1.5px 8px;
+    border-radius:3px;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    background-color:#DCE0E3;
+    color:rgba(0, 0, 0, 0.8);
+    background-color:var(--iui-color-background-4);
+    color:var(--iui-text-color); }
+  .iui-fieldset[disabled]{
+    cursor:not-allowed; }
+    .iui-fieldset[disabled] legend{
+      color:rgba(0, 0, 0, 0.4);
+      color:var(--iui-text-color-muted); }

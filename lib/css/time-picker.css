@@ -1,0 +1,107 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-time-picker{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  text-align:center;
+  height:286px;
+  display:inline-flex;
+  background-color:#FFF;
+  background-color:var(--iui-color-background-1); }
+  .iui-time-picker:not(:first-child){
+    border-left:1px solid #DCE0E3;
+    border-left:1px solid var(--iui-color-background-4); }
+  .iui-time-picker:first-child{
+    box-shadow:0 1px 5px rgba(0, 0, 0, 0.25); }
+
+.iui-time{
+  padding:11px 8px;
+  overflow-y:auto;
+  overflow-y:overlay;
+  scrollbar-width:none; }
+  .iui-time:not(:first-child){
+    border-left:1px solid #DCE0E3;
+    border-left:1px solid var(--iui-color-background-4); }
+  .iui-time > ol{
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align:baseline;
+    list-style:none; }
+    .iui-time > ol > li{
+      padding:6px 16px;
+      border-radius:3px; }
+      .iui-time > ol > li:focus{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-time > ol > li:focus:not(:focus-visible){
+        box-shadow:none; }
+      .iui-time > ol > li:focus-visible{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-time > ol > li:hover{
+        cursor:pointer;
+        color:#008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        color:var(--iui-color-foreground-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-time > ol > li.iui-selected{
+        font-weight:600;
+        cursor:default;
+        background-color:#008BE1;
+        color:#FFF;
+        background-color:var(--iui-color-background-primary);
+        color:var(--iui-color-foreground-accessory); }
+
+.iui-period{
+  padding:11px 8px;
+  overflow-y:auto;
+  overflow-y:overlay;
+  scrollbar-width:none;
+  display:flex;
+  align-items:center; }
+  .iui-period:not(:first-child){
+    border-left:1px solid #DCE0E3;
+    border-left:1px solid var(--iui-color-background-4); }
+  .iui-period > ol{
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align:baseline;
+    list-style:none; }
+    .iui-period > ol > li{
+      padding:6px 16px;
+      border-radius:3px; }
+      .iui-period > ol > li:focus{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-period > ol > li:focus:not(:focus-visible){
+        box-shadow:none; }
+      .iui-period > ol > li:focus-visible{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-period > ol > li:hover{
+        cursor:pointer;
+        color:#008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        color:var(--iui-color-foreground-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-period > ol > li.iui-selected{
+        font-weight:600;
+        cursor:default;
+        background-color:#008BE1;
+        color:#FFF;
+        background-color:var(--iui-color-background-primary);
+        color:var(--iui-color-foreground-accessory); }

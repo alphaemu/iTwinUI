@@ -1,0 +1,83 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-code{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-block;
+  font-family:ui-monospace, Menlo, "Segoe UI Mono", Consolas, "Roboto Mono", "Courier New", monospace;
+  font-size:12px;
+  padding:0 4px;
+  border-radius:3px;
+  -webkit-user-select:all;
+     -moz-user-select:all;
+          user-select:all;
+  background-color:#EEF0F3;
+  color:rgba(0, 0, 0, 0.8);
+  background-color:var(--iui-color-background-3);
+  color:var(--iui-text-color); }
+
+.iui-codeblock{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  margin:6px 0; }
+  .iui-codeblock > .iui-title-bar{
+    display:flex;
+    align-items:center;
+    border-radius:3px 3px 0 0;
+    background-color:#EEF0F3;
+    background-color:var(--iui-color-background-3); }
+    .iui-codeblock > .iui-title-bar > .iui-title{
+      margin-left:12px;
+      -webkit-user-select:all;
+         -moz-user-select:all;
+              user-select:all; }
+    .iui-codeblock > .iui-title-bar > .iui-button{
+      margin-left:auto; }
+  .iui-codeblock > .iui-codeblock-content{
+    margin:0;
+    overflow-x:auto;
+    overflow-y:auto;
+    border-radius:0 0 3px 3px;
+    white-space:normal;
+    border:1px solid #EEF0F3;
+    border:1px solid var(--iui-color-background-3); }
+    .iui-codeblock > .iui-codeblock-content:focus{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-codeblock > .iui-codeblock-content:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-codeblock > .iui-codeblock-content:focus-visible{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-codeblock > .iui-codeblock-content > code{
+      display:block;
+      width:100%;
+      white-space:nowrap;
+      -webkit-hyphens:auto;
+          -ms-hyphens:auto;
+              hyphens:auto;
+      counter-increment:section;
+      font-family:ui-monospace, Menlo, "Segoe UI Mono", Consolas, "Roboto Mono", "Courier New", monospace;
+      background-color:#FFF;
+      background-color:var(--iui-color-background-1); }
+      .iui-codeblock > .iui-codeblock-content > code:nth-child(even){
+        background:rgba(0, 0, 0, 0.02);
+        background:rgba(var(--iui-color-foreground-body-rgb), 0.02); }
+      .iui-codeblock > .iui-codeblock-content > code::before{
+        content:counter(section);
+        text-align:right;
+        display:inline-block;
+        padding:0 8px;
+        width:24px;
+        background-color:#F8F9FB;
+        color:rgba(0, 0, 0, 0.4);
+        background-color:var(--iui-color-background-2);
+        color:var(--iui-text-color-muted); }

@@ -1,0 +1,105 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-location-marker-default{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-block;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  position:relative;
+  width:24px;
+  height:24px;
+  cursor:pointer; }
+  .iui-location-marker-default > .iui-location-marker-default-pin{
+    filter:drop-shadow(0 1px 5px rgba(0, 0, 0, 0.25)); }
+    .iui-location-marker-default > .iui-location-marker-default-pin > .iui-location-marker-default-pin-dot{
+      fill:#FFF;
+      fill:var(--iui-color-foreground-accessory); }
+
+.iui-location-marker-data-rich{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-block;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  position:relative;
+  cursor:pointer; }
+  .iui-location-marker-data-rich > .iui-location-marker-data-rich-body{
+    min-width:32px;
+    border-radius:3px;
+    text-align:center;
+    font-size:16px;
+    padding:3px 8px;
+    filter:drop-shadow(0 1px 5px rgba(0, 0, 0, 0.25));
+    box-sizing:border-box;
+    position:relative;
+    border:solid 1px #FFF;
+    background-color:#FFF;
+    color:#FFF;
+    border:solid 1px var(--iui-color-foreground-accessory);
+    background-color:var(--iui-color-foreground-accessory);
+    color:var(--iui-color-foreground-accessory); }
+    .iui-location-marker-data-rich > .iui-location-marker-data-rich-body::before{
+      content:'';
+      position:absolute;
+      display:block;
+      width:0;
+      height:0;
+      bottom:-9px;
+      left:0;
+      right:0;
+      margin:auto;
+      border-width:4px;
+      border-style:solid;
+      border-color:#FFF transparent transparent transparent;
+      border-color:var(--iui-color-foreground-accessory) transparent transparent transparent; }
+    .iui-location-marker-data-rich > .iui-location-marker-data-rich-body > .iui-location-marker-data-rich-icon{
+      display:inline-block;
+      width:16px;
+      height:16px;
+      font-size:inherit;
+      vertical-align:-2px; }
+      .iui-location-marker-data-rich > .iui-location-marker-data-rich-body > .iui-location-marker-data-rich-icon.iui-location-marker-data-rich-icon-monochrome{
+        fill:#FFF;
+        fill:var(--iui-color-foreground-accessory); }
+
+.iui-location-marker-me{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-block;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  position:relative;
+  position:relative;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  cursor:default;
+  background:radial-gradient(circle at center, rgba(0, 139, 225, 0), rgba(0, 139, 225, 0.2));
+  background:radial-gradient(circle at center, rgba(var(--iui-color-foreground-primary-rgb), 0), rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-5))); }
+  .iui-location-marker-me > .iui-location-marker-me-dot{
+    width:12px;
+    height:12px;
+    position:absolute;
+    top:6px;
+    left:6px;
+    border-radius:50%;
+    box-sizing:border-box;
+    border:1px solid #FFF;
+    background-color:#008BE1;
+    border:1px solid var(--iui-color-foreground-accessory);
+    background-color:var(--iui-color-background-primary); }

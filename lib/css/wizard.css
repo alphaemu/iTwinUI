@@ -1,0 +1,165 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-wizard{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline; }
+  .iui-wizard > ol{
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align:baseline;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    width:100%;
+    margin-bottom:5.5px; }
+  .iui-wizard.iui-long .iui-wizard-steps-label{
+    display:block;
+    font-size:18px;
+    text-align:center; }
+  .iui-wizard.iui-long .iui-steps-count{
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    margin-right:8px;
+    color:rgba(0, 0, 0, 0.4);
+    color:var(--iui-text-color-muted); }
+  .iui-wizard.iui-workflow > ol{
+    align-items:center; }
+  .iui-wizard.iui-workflow .iui-wizard-step .iui-wizard-circle{
+    padding-left:16px;
+    padding-right:16px;
+    height:100%;
+    width:auto;
+    border-radius:0;
+    font-weight:400;
+    text-align:center;
+    background-color:#53A21A;
+    border-color:#53A21A;
+    color:#FFF;
+    background-color:var(--iui-color-background-positive);
+    border-color:var(--iui-color-background-positive);
+    color:var(--iui-color-foreground-accessory); }
+  .iui-wizard.iui-workflow .iui-wizard-step:first-of-type .iui-wizard-circle,
+  .iui-wizard.iui-workflow .iui-wizard-step:last-of-type .iui-wizard-circle{
+    border-radius:12px;
+    background-color:#FFF;
+    border-color:#53A21A;
+    color:#53A21A;
+    background-color:var(--iui-color-background-1);
+    border-color:var(--iui-color-foreground-positive);
+    color:var(--iui-color-foreground-positive); }
+  .iui-wizard.iui-workflow .iui-wizard-track-content::before,
+  .iui-wizard.iui-workflow .iui-wizard-track-content::after{
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }
+
+.iui-wizard-step{
+  flex:1;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:12px;
+  font-weight:400;
+  line-height:22px;
+  color:#53A21A;
+  color:var(--iui-color-background-positive); }
+  .iui-wizard-step .iui-wizard-circle{
+    align-items:center;
+    border-radius:50%;
+    display:flex;
+    width:24px;
+    height:24px;
+    justify-content:center;
+    overflow-wrap:break-word;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+    border:1px solid #53A21A;
+    background-color:#FFF;
+    color:#53A21A;
+    border:1px solid var(--iui-color-foreground-positive);
+    background-color:var(--iui-color-background-1);
+    color:var(--iui-color-foreground-positive); }
+  .iui-wizard-step.iui-current{
+    font-weight:600; }
+    .iui-wizard-step.iui-current .iui-wizard-step-name{
+      color:#53A21A;
+      color:var(--iui-color-foreground-positive); }
+    .iui-wizard-step.iui-current .iui-wizard-circle{
+      color:#FFF;
+      border-color:#53A21A;
+      background-color:#53A21A;
+      color:var(--iui-color-foreground-accessory);
+      border-color:var(--iui-color-background-positive);
+      background-color:var(--iui-color-background-positive); }
+    .iui-wizard-step.iui-current .iui-wizard-track-content::after{
+      background-color:#C7CCD1;
+      background-color:var(--iui-color-background-5); }
+  .iui-wizard-step.iui-current ~ .iui-wizard-step .iui-wizard-circle{
+    border:1px solid #C7CCD1;
+    background-color:#FFF;
+    color:rgba(0, 0, 0, 0.4);
+    border:1px solid var(--iui-color-background-5);
+    background-color:var(--iui-color-background-1);
+    color:var(--iui-text-color-muted); }
+  .iui-wizard-step.iui-current ~ .iui-wizard-step .iui-wizard-step-name{
+    color:rgba(0, 0, 0, 0.4);
+    color:var(--iui-text-color-muted); }
+  .iui-wizard-step.iui-current ~ .iui-wizard-step .iui-wizard-track-content::before,
+  .iui-wizard-step.iui-current ~ .iui-wizard-step:not(:last-of-type) .iui-wizard-track-content::after{
+    background-color:#C7CCD1;
+    background-color:var(--iui-color-background-5); }
+  .iui-wizard-step.iui-clickable .iui-wizard-circle{
+    cursor:pointer; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-wizard-step.iui-clickable .iui-wizard-circle{
+        transition:background-color 0.2s ease-out; } }
+    .iui-wizard-step.iui-clickable .iui-wizard-circle:hover{
+      color:#FFF;
+      border:1px solid #53A21A;
+      background-color:#53A21A;
+      color:var(--iui-color-foreground-accessory);
+      border:1px solid var(--iui-color-background-positive);
+      background-color:var(--iui-color-background-positive); }
+  .iui-wizard-step.iui-clickable:focus{
+    outline:0; }
+    .iui-wizard-step.iui-clickable:focus .iui-wizard-circle{
+      outline:0;
+      box-shadow:rgba(83, 162, 26, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-positive-box-shadow); }
+  .iui-wizard-step.iui-clickable:focus:not(:focus-visible) .iui-wizard-circle{
+    box-shadow:none; }
+  .iui-wizard-step:first-of-type .iui-wizard-track-content::before,
+  .iui-wizard-step:last-of-type .iui-wizard-track-content::after{
+    background-color:transparent; }
+
+.iui-wizard-track-content{
+  display:flex;
+  align-items:center;
+  width:100%; }
+  .iui-wizard-track-content::before, .iui-wizard-track-content::after{
+    content:'';
+    height:2px;
+    flex:1 2 auto;
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }
+
+.iui-wizard-step-name{
+  text-align:center;
+  -webkit-user-select:all;
+     -moz-user-select:all;
+          user-select:all;
+  color:#53A21A;
+  color:var(--iui-color-foreground-positive); }

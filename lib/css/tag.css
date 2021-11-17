@@ -1,0 +1,111 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-tag{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  -webkit-user-select:all;
+     -moz-user-select:all;
+          user-select:all;
+  text-transform:lowercase;
+  display:inline-flex; }
+  .iui-tag:focus{
+    outline:0;
+    box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+    box-shadow:var(--iui-focus-box-shadow); }
+  .iui-tag:focus:not(:focus-visible){
+    box-shadow:none; }
+  .iui-tag:focus-visible{
+    outline:0;
+    box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+    box-shadow:var(--iui-focus-box-shadow); }
+  .iui-tag:not(a){
+    color:rgba(0, 0, 0, 0.4);
+    color:var(--iui-text-color-muted); }
+  .iui-tag:not(.iui-basic){
+    height:33px;
+    margin:3px 0;
+    border-radius:16.5px;
+    box-sizing:border-box;
+    padding:0 2px;
+    align-items:center;
+    font-size:14px;
+    text-transform:none;
+    cursor:default;
+    border:1px solid rgba(0, 0, 0, 0.4);
+    background-color:#FFF;
+    color:rgba(0, 0, 0, 0.8);
+    border:1px solid rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4));
+    background-color:var(--iui-color-background-1);
+    color:var(--iui-text-color); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-tag:not(.iui-basic){
+        transition:border 0.2s ease-out; } }
+    .iui-tag:not(.iui-basic) > .iui-label{
+      margin:0;
+      padding:0;
+      border:none;
+      vertical-align:baseline;
+      font-size:14px;
+      font-weight:400;
+      line-height:22px;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      overflow:hidden;
+      margin:0 4px 0 8px; }
+      .iui-tag:not(.iui-basic) > .iui-label:only-child{
+        margin:0 8px; }
+    .iui-tag:not(.iui-basic) > .iui-button{
+      border-radius:50%; }
+    .iui-tag:not(.iui-basic):hover{
+      border-color:black;
+      border-color:rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-1)); }
+
+a.iui-tag{
+  text-decoration:none;
+  cursor:pointer;
+  color:#008BE1;
+  color:var(--iui-color-foreground-primary); }
+  a.iui-tag:focus{
+    outline:0;
+    box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+    box-shadow:var(--iui-focus-box-shadow); }
+  a.iui-tag:focus:not(:focus-visible){
+    box-shadow:none; }
+  a.iui-tag:focus-visible{
+    outline:0;
+    box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+    box-shadow:var(--iui-focus-box-shadow); }
+  a.iui-tag:hover{
+    color:#006bae;
+    color:var(--iui-color-foreground-primary-overlay);
+    text-decoration:underline; }
+
+.iui-tag-container{
+  color:rgba(0, 0, 0, 0.4);
+  color:var(--iui-text-color-muted); }
+  .iui-tag-container > .iui-tag:not(:last-child){
+    margin-right:4px; }
+  .iui-tag-container > .iui-basic:not(:last-child)::after{
+    content:','; }
+  .iui-tag-container.iui-truncate{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis; }
+    @supports (-webkit-line-clamp: 1){
+      .iui-tag-container.iui-truncate{
+        white-space:unset;
+        display:-webkit-box;
+        -webkit-line-clamp:1;
+        -webkit-box-orient:vertical; } }
+  .iui-tag-container.iui-scroll{
+    white-space:nowrap;
+    overflow-x:scroll; }
+  .iui-tag-container.iui-visible{
+    border-radius:3px;
+    padding:3px 12px;
+    background-color:#F8F9FB;
+    background-color:var(--iui-color-background-2); }

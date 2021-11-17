@@ -1,0 +1,207 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-alert{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  border-radius:3px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  border:1px solid #C7CCD1;
+  color:rgba(0, 0, 0, 0.8);
+  background-color:#FFF;
+  border:1px solid var(--iui-color-background-5);
+  color:var(--iui-text-color);
+  background-color:var(--iui-color-background-1); }
+  .iui-alert-icon{
+    fill:rgba(0, 0, 0, 0.4);
+    fill:var(--iui-icons-color);
+    display:inline-flex;
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+    margin-left:16px; }
+    .iui-alert-icon.iui-informational{
+      fill:#008BE1;
+      fill:var(--iui-icons-color-primary); }
+    .iui-alert-icon.iui-positive{
+      fill:#53A21A;
+      fill:var(--iui-icons-color-positive); }
+    .iui-alert-icon.iui-warning{
+      fill:#F18B12;
+      fill:var(--iui-icons-color-warning); }
+    .iui-alert-icon.iui-negative{
+      fill:#D30A0A;
+      fill:var(--iui-icons-color-negative); }
+  .iui-alert-message{
+    margin:11px 16px; }
+  .iui-alert-link{
+    cursor:pointer;
+    margin-left:8px;
+    text-decoration:underline;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+    white-space:nowrap;
+    color:#008BE1;
+    color:var(--iui-color-foreground-primary); }
+    .iui-alert-link:focus{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-alert-link:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-alert-link:focus-visible{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-alert-link:hover{
+      text-decoration:none;
+      color:#006bae;
+      color:var(--iui-color-foreground-primary-overlay); }
+  .iui-alert > .iui-button{
+    margin-left:auto;
+    margin-right:8px; }
+  .iui-alert.iui-sticky{
+    border-radius:0;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw; }
+  .iui-alert.iui-positive{
+    background:linear-gradient(rgba(83, 162, 26, 0.1), rgba(83, 162, 26, 0.1)), linear-gradient(#FFF, #FFF);
+    border-color:#53A21A;
+    background:linear-gradient(rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-6)), rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-6))), linear-gradient(var(--iui-color-background-1), var(--iui-color-background-1));
+    border-color:var(--iui-color-foreground-positive); }
+    .iui-alert.iui-positive .iui-alert-icon{
+      fill:#53A21A;
+      fill:var(--iui-icons-color-positive); }
+    .iui-alert.iui-positive .iui-alert-message::-moz-selection{
+      background-color:rgba(83, 162, 26, 0.4);
+      background-color:rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-positive .iui-alert-message::selection{
+      background-color:rgba(83, 162, 26, 0.4);
+      background-color:rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-positive .iui-alert-link{
+      color:#53A21A;
+      color:var(--iui-color-foreground-positive); }
+      .iui-alert.iui-positive .iui-alert-link:hover{
+        color:#3c7613;
+        color:var(--iui-color-foreground-positive-overlay); }
+    .iui-alert.iui-positive .iui-alert-link:focus,
+    .iui-alert.iui-positive > .iui-button:focus{
+      outline:0;
+      box-shadow:rgba(83, 162, 26, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-positive-box-shadow); }
+    .iui-alert.iui-positive .iui-alert-link:focus:not(:focus-visible),
+    .iui-alert.iui-positive > .iui-button:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-alert.iui-positive .iui-alert-link:focus-visible,
+    .iui-alert.iui-positive > .iui-button:focus-visible{
+      outline:0;
+      box-shadow:rgba(83, 162, 26, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-positive-box-shadow); }
+  .iui-alert.iui-negative{
+    background:linear-gradient(rgba(211, 10, 10, 0.1), rgba(211, 10, 10, 0.1)), linear-gradient(#FFF, #FFF);
+    border-color:#D30A0A;
+    background:linear-gradient(rgba(var(--iui-color-foreground-negative-rgb), var(--iui-opacity-6)), rgba(var(--iui-color-foreground-negative-rgb), var(--iui-opacity-6))), linear-gradient(var(--iui-color-background-1), var(--iui-color-background-1));
+    border-color:var(--iui-color-foreground-negative); }
+    .iui-alert.iui-negative .iui-alert-icon{
+      fill:#D30A0A;
+      fill:var(--iui-icons-color-negative); }
+    .iui-alert.iui-negative .iui-alert-message::-moz-selection{
+      background-color:rgba(211, 10, 10, 0.4);
+      background-color:rgba(var(--iui-color-foreground-negative-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-negative .iui-alert-message::selection{
+      background-color:rgba(211, 10, 10, 0.4);
+      background-color:rgba(var(--iui-color-foreground-negative-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-negative .iui-alert-link{
+      color:#D30A0A;
+      color:var(--iui-color-foreground-negative); }
+      .iui-alert.iui-negative .iui-alert-link:hover{
+        color:#a20808;
+        color:var(--iui-color-foreground-negative-overlay); }
+    .iui-alert.iui-negative .iui-alert-link:focus,
+    .iui-alert.iui-negative > .iui-button:focus{
+      outline:0;
+      box-shadow:rgba(211, 10, 10, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-negative-box-shadow); }
+    .iui-alert.iui-negative .iui-alert-link:focus:not(:focus-visible),
+    .iui-alert.iui-negative > .iui-button:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-alert.iui-negative .iui-alert-link:focus-visible,
+    .iui-alert.iui-negative > .iui-button:focus-visible{
+      outline:0;
+      box-shadow:rgba(211, 10, 10, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-negative-box-shadow); }
+  .iui-alert.iui-warning{
+    background:linear-gradient(rgba(241, 139, 18, 0.1), rgba(241, 139, 18, 0.1)), linear-gradient(#FFF, #FFF);
+    border-color:#F18B12;
+    background:linear-gradient(rgba(var(--iui-color-foreground-warning-rgb), var(--iui-opacity-6)), rgba(var(--iui-color-foreground-warning-rgb), var(--iui-opacity-6))), linear-gradient(var(--iui-color-background-1), var(--iui-color-background-1));
+    border-color:var(--iui-color-foreground-warning); }
+    .iui-alert.iui-warning .iui-alert-icon{
+      fill:#F18B12;
+      fill:var(--iui-icons-color-warning); }
+    .iui-alert.iui-warning .iui-alert-message::-moz-selection{
+      background-color:rgba(241, 139, 18, 0.4);
+      background-color:rgba(var(--iui-color-foreground-warning-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-warning .iui-alert-message::selection{
+      background-color:rgba(241, 139, 18, 0.4);
+      background-color:rgba(var(--iui-color-foreground-warning-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-warning .iui-alert-link{
+      color:#F18B12;
+      color:var(--iui-color-foreground-warning); }
+      .iui-alert.iui-warning .iui-alert-link:hover{
+        color:#c4700c;
+        color:var(--iui-color-foreground-warning-overlay); }
+    .iui-alert.iui-warning .iui-alert-link:focus,
+    .iui-alert.iui-warning > .iui-button:focus{
+      outline:0;
+      box-shadow:rgba(241, 139, 18, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-warning-box-shadow); }
+    .iui-alert.iui-warning .iui-alert-link:focus:not(:focus-visible),
+    .iui-alert.iui-warning > .iui-button:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-alert.iui-warning .iui-alert-link:focus-visible,
+    .iui-alert.iui-warning > .iui-button:focus-visible{
+      outline:0;
+      box-shadow:rgba(241, 139, 18, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-warning-box-shadow); }
+  .iui-alert.iui-informational{
+    background:linear-gradient(rgba(0, 139, 225, 0.1), rgba(0, 139, 225, 0.1)), linear-gradient(#FFF, #FFF);
+    border-color:#008BE1;
+    background:linear-gradient(rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)), rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6))), linear-gradient(var(--iui-color-background-1), var(--iui-color-background-1));
+    border-color:var(--iui-color-foreground-primary); }
+    .iui-alert.iui-informational .iui-alert-icon{
+      fill:#008BE1;
+      fill:var(--iui-icons-color-primary); }
+    .iui-alert.iui-informational .iui-alert-message::-moz-selection{
+      background-color:rgba(0, 139, 225, 0.4);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-informational .iui-alert-message::selection{
+      background-color:rgba(0, 139, 225, 0.4);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-4)); }
+    .iui-alert.iui-informational .iui-alert-link{
+      color:#008BE1;
+      color:var(--iui-color-foreground-primary); }
+      .iui-alert.iui-informational .iui-alert-link:hover{
+        color:#006bae;
+        color:var(--iui-color-foreground-primary-overlay); }
+    .iui-alert.iui-informational .iui-alert-link:focus,
+    .iui-alert.iui-informational > .iui-button:focus{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+    .iui-alert.iui-informational .iui-alert-link:focus:not(:focus-visible),
+    .iui-alert.iui-informational > .iui-button:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-alert.iui-informational .iui-alert-link:focus-visible,
+    .iui-alert.iui-informational > .iui-button:focus-visible{
+      outline:0;
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }

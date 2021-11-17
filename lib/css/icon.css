@@ -1,0 +1,117 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-icons-default{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:16px;
+  height:16px; }
+  .iui-icons-default.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-default.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-default.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-default.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }
+
+.iui-icons-small{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:12px;
+  height:12px; }
+  .iui-icons-small.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-small.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-small.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-small.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }
+
+.iui-icons-large{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:24px;
+  height:24px; }
+  .iui-icons-large.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-large.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-large.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-large.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }
+
+.iui-icons-xl{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:32px;
+  height:32px; }
+  .iui-icons-xl.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-xl.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-xl.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-xl.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }
+
+.iui-icons-xxl{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:48px;
+  height:48px; }
+  .iui-icons-xxl.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-xxl.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-xxl.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-xxl.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }
+
+.iui-icons-3xl{
+  fill:rgba(0, 0, 0, 0.4);
+  fill:var(--iui-icons-color);
+  display:inline-flex;
+  width:64px;
+  height:64px; }
+  .iui-icons-3xl.iui-informational{
+    fill:#008BE1;
+    fill:var(--iui-icons-color-primary); }
+  .iui-icons-3xl.iui-positive{
+    fill:#53A21A;
+    fill:var(--iui-icons-color-positive); }
+  .iui-icons-3xl.iui-warning{
+    fill:#F18B12;
+    fill:var(--iui-icons-color-warning); }
+  .iui-icons-3xl.iui-negative{
+    fill:#D30A0A;
+    fill:var(--iui-icons-color-negative); }

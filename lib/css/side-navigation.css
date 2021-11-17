@@ -1,0 +1,186 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-side-navigation{
+  display:inline-flex;
+  flex:0 0 auto;
+  flex-direction:column;
+  height:100%;
+  background-color:#EEF0F3;
+  border-right:1px solid #C7CCD1;
+  background-color:var(--iui-color-background-3);
+  border-right:1px solid var(--iui-color-background-5); }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-side-navigation{
+      transition:max-width 0.2s ease-out; } }
+  .iui-side-navigation > .iui-sidenav-content{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    width:100%; }
+    .iui-side-navigation > .iui-sidenav-content > .iui-top,
+    .iui-side-navigation > .iui-sidenav-content > .iui-bottom{
+      flex-grow:1;
+      display:flex;
+      flex-direction:column; }
+    .iui-side-navigation > .iui-sidenav-content > .iui-top .iui-sidenav-button:first-of-type{
+      border-top:none; }
+    .iui-side-navigation > .iui-sidenav-content > .iui-top .iui-sidenav-button:not(:last-of-type){
+      border-bottom:none; }
+    .iui-side-navigation > .iui-sidenav-content > .iui-bottom{
+      justify-content:flex-end; }
+      .iui-side-navigation > .iui-sidenav-content > .iui-bottom .iui-sidenav-button{
+        border-bottom:none; }
+    .iui-side-navigation > .iui-sidenav-content + .iui-sidenav-button.iui-expand{
+      border:none;
+      border-top:1px solid #C7CCD1;
+      border-top:1px solid var(--iui-color-background-5); }
+  .iui-side-navigation.iui-collapsed{
+    min-width:72px;
+    max-width:72px; }
+    @supports (min-width: max(0px)){
+      .iui-side-navigation.iui-collapsed{
+        min-width:max(24px * 3, 24px * 3 + env(safe-area-inset-left));
+        max-width:max(24px * 3, 24px * 3 + env(safe-area-inset-left)); } }
+  .iui-side-navigation.iui-expanded,
+  .iui-side-navigation > .iui-sidenav-content{
+    max-width:288px; }
+    .iui-side-navigation.iui-expanded > .iui-sidenav-button.iui-expand > .iui-icon,
+    .iui-side-navigation > .iui-sidenav-content > .iui-sidenav-button.iui-expand > .iui-icon{
+      transform:scaleX(-1); }
+  .iui-side-navigation .iui-sidenav-button{
+    border-radius:0;
+    border-left:none;
+    border-right:none;
+    overflow:hidden;
+    justify-content:flex-start; }
+    .iui-side-navigation .iui-sidenav-button:not(.iui-expand){
+      height:55px; }
+      @supports (padding: max(0px)){
+        .iui-side-navigation .iui-sidenav-button:not(.iui-expand){
+          padding-left:max(24px, 24px + env(safe-area-inset-left)); } }
+    .iui-side-navigation .iui-sidenav-button, .iui-side-navigation .iui-sidenav-button:enabled:hover, .iui-side-navigation .iui-sidenav-button[disabled], .iui-side-navigation .iui-sidenav-button:focus-visible{
+      border-color:#C7CCD1;
+      border-color:var(--iui-color-background-5); }
+    .iui-side-navigation .iui-sidenav-button > .iui-icon:not(.iui-user-icon){
+      width:24px;
+      height:24px;
+      flex-shrink:0; }
+      .iui-side-navigation .iui-sidenav-button > .iui-icon:not(.iui-user-icon) + .iui-label{
+        margin-left:24px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis; }
+    .iui-side-navigation .iui-sidenav-button.iui-submenu-open .iui-icon{
+      fill:#008BE1;
+      fill:var(--iui-color-foreground-primary); }
+    .iui-side-navigation .iui-sidenav-button.iui-active:focus, .iui-side-navigation .iui-sidenav-button.iui-active:focus-visible{
+      box-shadow:inset 0 0 4px rgba(0, 139, 225, 0.6), inset 2px 0 0 0 #008BE1;
+      box-shadow:inset 0 0 4px rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-3)), inset 2px 0 0 0 var(--iui-icons-color-primary); }
+    .iui-side-navigation .iui-sidenav-button.iui-active, .iui-side-navigation .iui-sidenav-button.iui-active:focus:not(:focus-visible){
+      box-shadow:inset 2px 0 0 0 #008BE1;
+      box-shadow:inset 2px 0 0 0 var(--iui-icons-color-primary); }
+    .iui-side-navigation .iui-sidenav-button[disabled]{
+      background-color:#F8F9FB;
+      background-color:var(--iui-color-background-2); }
+    .iui-side-navigation .iui-sidenav-button:focus{
+      outline:0;
+      box-shadow:inset 0 0 4px rgba(0, 139, 225, 0.6);
+      box-shadow:inset 0 0 4px rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-3)); }
+    .iui-side-navigation .iui-sidenav-button:focus:not(:focus-visible){
+      box-shadow:none; }
+    .iui-side-navigation .iui-sidenav-button:focus-visible{
+      outline:0;
+      box-shadow:inset 0 0 4px rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-3)); }
+    .iui-side-navigation .iui-sidenav-button.iui-expand{
+      height:22px;
+      justify-content:center;
+      border:none;
+      border-bottom:1px solid #C7CCD1;
+      border-bottom:1px solid var(--iui-color-background-5); }
+      .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon{
+        fill:rgba(0, 0, 0, 0.4);
+        fill:var(--iui-icons-color);
+        display:inline-flex;
+        width:12px;
+        height:12px; }
+        .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon.iui-informational{
+          fill:#008BE1;
+          fill:var(--iui-icons-color-primary); }
+        .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon.iui-positive{
+          fill:#53A21A;
+          fill:var(--iui-icons-color-positive); }
+        .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon.iui-warning{
+          fill:#F18B12;
+          fill:var(--iui-icons-color-warning); }
+        .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon.iui-negative{
+          fill:#D30A0A;
+          fill:var(--iui-icons-color-negative); }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-side-navigation .iui-sidenav-button.iui-expand > .iui-icon{
+            transition:transform 0.4s ease-out; } }
+
+.iui-side-navigation-submenu{
+  min-width:192px;
+  max-width:50vw;
+  height:100%;
+  box-sizing:border-box;
+  overflow-x:hidden;
+  overflow-y:auto;
+  overflow-y:overlay;
+  resize:horizontal;
+  background-color:#FFF;
+  border-right:1px solid #C7CCD1;
+  background-color:var(--iui-color-background-1);
+  border-right:1px solid var(--iui-color-background-5); }
+  .iui-side-navigation-submenu.iui-enter{
+    opacity:0; }
+  .iui-side-navigation-submenu.iui-enter-active{
+    opacity:1; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-side-navigation-submenu.iui-enter-active{
+        transition:opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out; } }
+  .iui-side-navigation-submenu.iui-exit{
+    opacity:1; }
+  .iui-side-navigation-submenu.iui-exit-active{
+    opacity:0; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-side-navigation-submenu.iui-exit-active{
+        transition:opacity 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out; } }
+  .iui-side-navigation-submenu.iui-enter-active, .iui-side-navigation-submenu.iui-exit-active{
+    display:flex; }
+  .iui-side-navigation-submenu-content{
+    padding:0 12px 11px;
+    flex-shrink:0;
+    box-sizing:border-box; }
+  .iui-side-navigation-submenu-header{
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between; }
+    .iui-side-navigation-submenu-header-label{
+      margin:0;
+      padding:0;
+      border:none;
+      vertical-align:baseline;
+      font-size:24px;
+      font-weight:300;
+      line-height:33px;
+      display:flex;
+      align-items:center;
+      overflow:hidden; }
+      .iui-side-navigation-submenu-header-label .iui-button{
+        flex-shrink:0; }
+      .iui-side-navigation-submenu-header-label > *{
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis; }
+    .iui-side-navigation-submenu-header-actions{
+      flex-shrink:0;
+      margin-left:8px; }
+
+.iui-side-navigation-wrapper{
+  display:flex;
+  position:relative;
+  height:100%; }

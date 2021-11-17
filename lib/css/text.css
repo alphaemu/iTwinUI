@@ -1,0 +1,96 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-text-headline{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:32px;
+  font-weight:300;
+  line-height:44px; }
+
+.iui-text-title{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:24px;
+  font-weight:300;
+  line-height:33px; }
+
+.iui-text-subheading{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:18px;
+  font-weight:400;
+  line-height:33px; }
+
+.iui-text-leading{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:16px;
+  font-weight:400;
+  line-height:22px; }
+
+.iui-text-block{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:14px;
+  font-weight:400;
+  line-height:22px; }
+
+.iui-text-small{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  font-size:12px;
+  font-weight:400;
+  line-height:22px; }
+
+.iui-text-muted{
+  color:rgba(0, 0, 0, 0.4);
+  color:var(--iui-text-color-muted); }
+
+.iui-skeleton{
+  display:inline-block;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  color:transparent;
+  border-radius:3px;
+  background:linear-gradient(270deg, #EEF0F3, #EEF0F3, #F8F9FB, #EEF0F3, #EEF0F3);
+  background-size:200% 100%;
+  background:linear-gradient(270deg, var(--iui-color-background-3), var(--iui-color-background-3), var(--iui-color-background-2), var(--iui-color-background-3), var(--iui-color-background-3));
+  background-size:200% 100%; }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-skeleton{
+      -webkit-animation:skeleton-shimmer 0.8s linear infinite;
+              animation:skeleton-shimmer 0.8s linear infinite; }
+    @-webkit-keyframes skeleton-shimmer{
+      0%{
+        background-position:200% 50%; }
+      50%{
+        background-position:100% 50%; }
+      100%{
+        background-position:0% 50%; } }
+    @keyframes skeleton-shimmer{
+      0%{
+        background-position:200% 50%; }
+      50%{
+        background-position:100% 50%; }
+      100%{
+        background-position:0% 50%; } } }
+
+.iui-text-spacing{
+  padding:0;
+  margin:0 0 22px; }

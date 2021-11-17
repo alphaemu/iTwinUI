@@ -1,0 +1,255 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-tabs-wrapper{
+  display:flex;
+  position:relative; }
+  .iui-tabs-wrapper.iui-horizontal{
+    flex-direction:column; }
+    .iui-tabs-wrapper.iui-horizontal .iui-tabs{
+      display:flex; }
+    .iui-tabs-wrapper.iui-horizontal .iui-tab::after{
+      width:100%;
+      height:0; }
+    .iui-tabs-wrapper.iui-horizontal .iui-tab.iui-active::after{
+      height:2px; }
+  .iui-tabs-wrapper.iui-vertical .iui-tabs{
+    flex-direction:column; }
+    .iui-tabs-wrapper.iui-vertical .iui-tabs li,
+    .iui-tabs-wrapper.iui-vertical .iui-tabs .iui-tab{
+      width:100%;
+      white-space:nowrap; }
+    .iui-tabs-wrapper.iui-vertical .iui-tabs ~ .iui-tabs-content{
+      flex-grow:1; }
+  .iui-tabs-wrapper.iui-vertical .iui-tab::after{
+    width:0;
+    height:100%; }
+  .iui-tabs-wrapper.iui-vertical .iui-tab.iui-active::after{
+    width:2px; }
+
+.iui-tabs{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  position:relative;
+  align-items:center;
+  list-style:none;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none; }
+  .iui-tabs .iui-tab{
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align:baseline;
+    font-family:inherit;
+    position:relative;
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    cursor:pointer;
+    color:rgba(0, 0, 0, 0.8);
+    color:var(--iui-text-color); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-tabs .iui-tab{
+        transition:background-color 0.2s ease-out; } }
+    .iui-tabs .iui-tab.iui-active{
+      color:#008BE1;
+      color:var(--iui-color-foreground-primary); }
+      .iui-tabs .iui-tab.iui-active .iui-tab-icon{
+        fill:#008BE1;
+        fill:var(--iui-icons-color-primary); }
+    .iui-tabs .iui-tab[disabled]{
+      cursor:not-allowed;
+      color:rgba(0, 0, 0, 0.4);
+      color:var(--iui-text-color-muted); }
+      .iui-tabs .iui-tab[disabled] .iui-tab-icon{
+        fill:rgba(0, 0, 0, 0.2);
+        fill:var(--iui-icons-color-actionable-disabled); }
+    .iui-tabs .iui-tab:focus{
+      outline:1px solid var(--iui-color-foreground-primary);
+      outline-offset:-1px; }
+    .iui-tabs .iui-tab:focus:not(:focus-visible){
+      outline:none; }
+  .iui-tabs .iui-tab-icon{
+    width:16px;
+    height:16px;
+    fill:rgba(0, 0, 0, 0.8);
+    fill:var(--iui-icons-color-actionable); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-tabs .iui-tab-icon{
+        transition:fill 0.2s ease-out; } }
+    .iui-tabs .iui-tab-icon + .iui-tab-label{
+      margin-left:8px; }
+  .iui-tabs .iui-tab-label{
+    text-align:left; }
+  .iui-tabs .iui-tab-description{
+    display:none;
+    font-size:12px;
+    opacity:0.6;
+    opacity:var(--iui-opacity-3); }
+  .iui-tabs.iui-green .iui-tab:focus{
+    outline-color:var(--iui-color-foreground-positive); }
+  .iui-tabs.iui-green .iui-tab.iui-active{
+    color:#53A21A;
+    color:var(--iui-color-foreground-positive); }
+    .iui-tabs.iui-green .iui-tab.iui-active .iui-tab-icon{
+      fill:#53A21A;
+      fill:var(--iui-icons-color-positive); }
+  .iui-tabs ~ .iui-tabs-content{
+    padding-top:11px;
+    padding-bottom:11px;
+    box-sizing:border-box; }
+  .iui-tabs.iui-default .iui-tab::after{
+    content:'';
+    position:absolute;
+    background-color:#008BE1;
+    background-color:var(--iui-color-foreground-primary); }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-tabs.iui-default .iui-active::after{
+      transition:width 0.2s ease, height 0.2s ease; } }
+  .iui-tabs.iui-default.iui-green .iui-tab::after{
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }
+  .iui-tabs.iui-default .iui-tab{
+    height:38px;
+    padding:0 16px;
+    box-sizing:border-box;
+    background-color:#F8F9FB;
+    border:1px solid #C7CCD1;
+    background-color:var(--iui-color-background-2);
+    border:1px solid var(--iui-color-background-5); }
+    .iui-tabs.iui-default .iui-tab::after{
+      top:0;
+      left:0; }
+    .iui-tabs.iui-default .iui-tab:hover{
+      background-color:#FFF;
+      background-color:var(--iui-color-background-1); }
+    .iui-tabs.iui-default .iui-tab.iui-active{
+      background-color:#FFF;
+      background-color:var(--iui-color-background-1); }
+    .iui-tabs.iui-default .iui-tab[disabled]{
+      background-color:#EEF0F3;
+      background-color:var(--iui-color-background-3); }
+  .iui-horizontal .iui-tabs.iui-default .iui-tab.iui-active{
+    border-bottom-color:transparent; }
+  .iui-horizontal .iui-tabs.iui-default :not(:first-child) .iui-tab{
+    border-left:none; }
+  .iui-horizontal .iui-tabs.iui-default ~ .iui-tabs-content{
+    margin-top:-1px; }
+  .iui-vertical .iui-tabs.iui-default .iui-tab.iui-active{
+    border-right-color:transparent; }
+  .iui-vertical .iui-tabs.iui-default :not(:first-child) .iui-tab{
+    border-top:none; }
+  .iui-vertical .iui-tabs.iui-default ~ .iui-tabs-content{
+    margin-left:-1px; }
+  .iui-tabs.iui-default.iui-large .iui-tab{
+    height:49px; }
+  .iui-tabs.iui-default.iui-large .iui-tab-description{
+    display:block; }
+  .iui-tabs.iui-default.iui-green .iui-tab::after{
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }
+  .iui-tabs.iui-default ~ .iui-tabs-content{
+    padding-left:16px;
+    padding-right:16px;
+    background-color:#FFF;
+    border:1px solid #C7CCD1;
+    background-color:var(--iui-color-background-1);
+    border:1px solid var(--iui-color-background-5); }
+  .iui-tabs.iui-borderless .iui-tab{
+    height:38px;
+    padding:0 24px;
+    background-color:transparent; }
+    .iui-tabs.iui-borderless .iui-tab::after{
+      bottom:0;
+      right:0; }
+    .iui-tabs.iui-borderless .iui-tab:hover{
+      background-color:rgba(0, 139, 225, 0.1);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+    .iui-tabs.iui-borderless .iui-tab.iui-active{
+      background-color:rgba(0, 139, 225, 0.1);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+  .iui-horizontal .iui-tabs.iui-borderless ~ .iui-tabs-content{
+    margin-top:-2px;
+    border-top:2px solid #DCE0E3;
+    border-top:2px solid var(--iui-color-background-4); }
+  .iui-vertical .iui-tabs.iui-borderless ~ .iui-tabs-content{
+    margin-left:-2px;
+    padding-left:12px;
+    padding-right:12px;
+    border-left:2px solid #DCE0E3;
+    border-left:2px solid var(--iui-color-background-4); }
+  .iui-tabs.iui-borderless.iui-green .iui-active,
+  .iui-tabs.iui-borderless.iui-green .iui-tab:hover{
+    background-color:rgba(83, 162, 26, 0.1);
+    background-color:rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-6)); }
+  .iui-tabs.iui-borderless.iui-large .iui-tab{
+    height:49px; }
+  .iui-tabs.iui-borderless.iui-large .iui-tab-description{
+    display:block; }
+  .iui-tabs.iui-borderless .iui-tab[disabled]:hover{
+    background-color:transparent;
+    background-color:transparent; }
+  .iui-tabs.iui-pill{
+    justify-content:space-evenly; }
+    .iui-tabs.iui-pill > li{
+      flex:1 1 0; }
+      .iui-tabs.iui-pill > li:not(:last-child){
+        margin-right:2px; }
+    .iui-tabs.iui-pill.iui-green .iui-tab:hover{
+      background-color:rgba(83, 162, 26, 0.1);
+      background-color:rgba(var(--iui-color-foreground-positive-rgb), var(--iui-opacity-6)); }
+    .iui-tabs.iui-pill .iui-tab{
+      height:38px;
+      background-color:transparent;
+      width:100%;
+      justify-content:center;
+      border-radius:3px; }
+      .iui-tabs.iui-pill .iui-tab::after{
+        bottom:0;
+        left:0; }
+      .iui-tabs.iui-pill .iui-tab:hover{
+        background-color:rgba(0, 139, 225, 0.1);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-tabs.iui-pill .iui-tab[disabled]:hover{
+        background-color:transparent;
+        background-color:transparent; }
+  .iui-tabs.iui-animated::after{
+    position:absolute;
+    content:' ';
+    background-color:#008BE1;
+    background-color:var(--iui-color-foreground-primary); }
+  .iui-tabs.iui-animated.iui-green::after{
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }
+  .iui-horizontal .iui-tabs.iui-animated::after{
+    top:calc(100% - 2px);
+    height:2px;
+    left:var(--stripe-left);
+    width:var(--stripe-width); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-horizontal .iui-tabs.iui-animated::after{
+        transition:width 0.2s ease-out, left 0.2s ease-out; } }
+  .iui-vertical .iui-tabs.iui-animated::after{
+    left:calc(100% - 2px);
+    width:2px;
+    top:var(--stripe-top);
+    height:var(--stripe-height); }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-vertical .iui-tabs.iui-animated::after{
+        transition:top 0.2s ease-out; } }
+  .iui-tabs.iui-not-animated .iui-tab::after{
+    content:'';
+    position:absolute;
+    background-color:#008BE1;
+    background-color:var(--iui-color-foreground-primary); }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-tabs.iui-not-animated .iui-active::after{
+      transition:width 0.2s ease, height 0.2s ease; } }
+  .iui-tabs.iui-not-animated.iui-green .iui-tab::after{
+    background-color:#53A21A;
+    background-color:var(--iui-color-foreground-positive); }

@@ -1,0 +1,111 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-date-picker{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  box-shadow:0 1px 5px rgba(0, 0, 0, 0.25);
+  background-color:#FFF;
+  color:rgba(0, 0, 0, 0.8);
+  background-color:var(--iui-color-background-1);
+  color:var(--iui-text-color);
+  box-shadow:0 1px 5px rgba(0, 0, 0, 0.25);
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  text-align:center;
+  height:286px;
+  display:inline-flex;
+  background-color:#FFF;
+  background-color:var(--iui-color-background-1); }
+  .iui-date-picker > .iui-calendar > .iui-header{
+    border:none;
+    padding:0;
+    position:relative;
+    font-weight:700;
+    background-color:#FFF;
+    background-color:var(--iui-color-background-1); }
+    .iui-date-picker > .iui-calendar > .iui-header > .iui-month-year{
+      display:inline-flex;
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 4px;
+      box-sizing:border-box; }
+      .iui-date-picker > .iui-calendar > .iui-header > .iui-month-year > span{
+        margin:0 4px;
+        width:156px;
+        white-space:nowrap;
+        display:inline-flex;
+        flex-shrink:0;
+        align-items:center;
+        justify-content:center;
+        line-height:44px; }
+      .iui-date-picker > .iui-calendar > .iui-header > .iui-month-year .iui-month{
+        overflow:hidden;
+        max-width:15ch;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        flex-shrink:0; }
+    .iui-date-picker > .iui-calendar > .iui-header > .iui-weekdays{
+      line-height:33px;
+      display:flex;
+      justify-content:space-evenly;
+      align-items:center;
+      padding:0 8px;
+      background-color:#F8F9FB;
+      background-color:var(--iui-color-background-2); }
+      .iui-date-picker > .iui-calendar > .iui-header > .iui-weekdays > div{
+        white-space:nowrap;
+        overflow:hidden;
+        width:32px;
+        text-align:center; }
+  .iui-date-picker > .iui-calendar > .iui-dates > .iui-week{
+    white-space:nowrap;
+    height:33px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    padding:0 8px; }
+    .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date{
+      cursor:pointer;
+      display:inline-block;
+      width:33px;
+      line-height:33px; }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date:focus{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date:focus:not(:focus-visible){
+        box-shadow:none; }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date:focus-visible{
+        outline:0;
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+        box-shadow:var(--iui-focus-box-shadow); }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date:hover:not(.iui-selected){
+        border-radius:3px;
+        font-weight:600;
+        color:#008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        color:var(--iui-color-foreground-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date.iui-today{
+        font-weight:600;
+        border-radius:50%;
+        background-color:rgba(0, 0, 0, 0.1);
+        background-color:rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6)); }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date.iui-selected{
+        font-weight:600;
+        border-radius:3px;
+        cursor:default;
+        background-color:#008BE1;
+        color:#FFF;
+        background-color:var(--iui-color-background-primary);
+        color:var(--iui-color-foreground-accessory); }
+      .iui-date-picker > .iui-calendar > .iui-dates > .iui-week > .iui-date.iui-outside-month{
+        color:rgba(0, 0, 0, 0.4);
+        color:var(--iui-text-color-muted); }

@@ -1,0 +1,395 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-page-header{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  height:57px;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
+  box-sizing:border-box;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  background-color:#FFF;
+  border-bottom:2px solid #C7CCD1;
+  color:rgba(0, 0, 0, 0.8);
+  background-color:var(--iui-color-background-1);
+  border-bottom:2px solid var(--iui-color-background-5);
+  color:var(--iui-text-color); }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-page-header{
+      transition:height 0.2s ease-out; } }
+  .iui-page-header > .iui-left,
+  .iui-page-header > .iui-center,
+  .iui-page-header > .iui-right{
+    display:flex;
+    align-items:center;
+    height:100%; }
+  .iui-page-header .iui-header-button-icon{
+    width:24px;
+    height:24px;
+    border-radius:3px; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-page-header .iui-header-button-icon{
+        transition:width 0.2s ease-out, height 0.2s ease-out, margin 0.2s ease-out; } }
+  .iui-page-header .iui-header-button.iui-header-button{
+    max-width:25vw;
+    overflow:hidden;
+    padding-right:8px; }
+    .iui-page-header .iui-header-button.iui-header-button:focus{
+      box-shadow:none;
+      outline-offset:-1px;
+      outline:1px solid #008BE1;
+      outline:1px solid var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-button.iui-header-button:focus:not(:focus-visible){
+      outline:0; }
+    .iui-page-header .iui-header-button.iui-header-button > .iui-label{
+      text-align:left;
+      font-size:14px;
+      overflow:hidden; }
+      .iui-page-header .iui-header-button.iui-header-button > .iui-label > div{
+        overflow:hidden;
+        text-overflow:ellipsis; }
+      .iui-page-header .iui-header-button.iui-header-button > .iui-label .iui-description{
+        height:22px;
+        opacity:0.6;
+        opacity:var(--iui-opacity-3); }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-page-header .iui-header-button.iui-header-button > .iui-label .iui-description{
+            transition:all 0.2s ease; } }
+    .iui-page-header .iui-header-button.iui-header-button > .iui-icon{
+      flex-shrink:0; }
+    .iui-page-header .iui-header-button.iui-header-button .iui-header-button-icon{
+      padding:4px;
+      width:16px;
+      height:16px;
+      border-radius:3px;
+      background-color:#EEF0F3;
+      fill:rgba(0, 0, 0, 0.4);
+      background-color:var(--iui-color-background-3);
+      fill:var(--iui-icons-color); }
+      @media (prefers-reduced-motion: no-preference){
+        .iui-page-header .iui-header-button.iui-header-button .iui-header-button-icon{
+          transition:width 0.2s ease-out, height 0.2s ease-out, margin 0.2s ease-out; } }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active svg{
+      fill:#008BE1;
+      fill:var(--iui-icons-color-primary); }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active, .iui-page-header .iui-header-button.iui-header-button.iui-active:hover{
+      box-shadow:0 2px 0 0 #008BE1;
+      background-color:rgba(0, 139, 225, 0.1);
+      box-shadow:0 2px 0 0 var(--iui-color-foreground-primary);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-page-header .iui-header-button.iui-header-button.iui-active .iui-header-button-icon, .iui-page-header .iui-header-button.iui-header-button.iui-active:hover .iui-header-button-icon{
+        fill:#008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        fill:var(--iui-icons-color-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active .iui-label{
+      color:#008BE1;
+      color:var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active:focus{
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px, 0 2px 0 0 #008BE1;
+      box-shadow:var(--iui-focus-box-shadow), 0 2px 0 0 var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active:focus:not(:focus-visible){
+      box-shadow:0 2px 0 0 #008BE1;
+      box-shadow:0 2px 0 0 var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-button.iui-header-button.iui-active.iui-disabled, .iui-page-header .iui-header-button.iui-header-button.iui-active:disabled{
+      background-color:rgba(0, 0, 0, 0.05);
+      box-shadow:0 2px 0 0 rgba(0, 0, 0, 0.4);
+      background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05);
+      box-shadow:0 2px 0 0 rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4)); }
+      .iui-page-header .iui-header-button.iui-header-button.iui-active.iui-disabled .iui-label, .iui-page-header .iui-header-button.iui-header-button.iui-active:disabled .iui-label{
+        color:rgba(0, 0, 0, 0.2);
+        color:var(--iui-icons-color-actionable-disabled); }
+      .iui-page-header .iui-header-button.iui-header-button.iui-active.iui-disabled .iui-icon,
+      .iui-page-header .iui-header-button.iui-header-button.iui-active.iui-disabled svg, .iui-page-header .iui-header-button.iui-header-button.iui-active:disabled .iui-icon,
+      .iui-page-header .iui-header-button.iui-header-button.iui-active:disabled svg{
+        fill:rgba(0, 0, 0, 0.2);
+        fill:var(--iui-icons-color-actionable-disabled); }
+      .iui-page-header .iui-header-button.iui-header-button.iui-active.iui-disabled .iui-header-button-icon, .iui-page-header .iui-header-button.iui-header-button.iui-active:disabled .iui-header-button-icon{
+        background-color:rgba(0, 0, 0, 0.05);
+        background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05); }
+    .iui-page-header .iui-header-button.iui-header-button:disabled .iui-header-button-icon{
+      filter:grayscale(1) opacity(0.7); }
+    .iui-page-header.iui-slim > .iui-left .iui-button .iui-header-button-icon.iui-header-button-icon{
+      width:12px;
+      height:12px;
+      padding:2px; }
+    .iui-page-header.iui-slim > .iui-left .iui-button .iui-label .iui-description{
+      opacity:0;
+      height:0.1px;
+      width:0.1px;
+      margin:0;
+      padding:0; }
+  .iui-page-header .iui-header-split-button{
+    height:100%;
+    display:flex;
+    overflow:hidden;
+    max-width:25vw; }
+    .iui-page-header .iui-header-split-button .iui-button{
+      max-width:25vw;
+      overflow:hidden;
+      padding-right:8px;
+      padding:0 4px; }
+      .iui-page-header .iui-header-split-button .iui-button:focus{
+        box-shadow:none;
+        outline-offset:-1px;
+        outline:1px solid #008BE1;
+        outline:1px solid var(--iui-color-foreground-primary); }
+      .iui-page-header .iui-header-split-button .iui-button:focus:not(:focus-visible){
+        outline:0; }
+      .iui-page-header .iui-header-split-button .iui-button > .iui-label{
+        text-align:left;
+        font-size:14px;
+        overflow:hidden; }
+        .iui-page-header .iui-header-split-button .iui-button > .iui-label > div{
+          overflow:hidden;
+          text-overflow:ellipsis; }
+        .iui-page-header .iui-header-split-button .iui-button > .iui-label .iui-description{
+          height:22px;
+          opacity:0.6;
+          opacity:var(--iui-opacity-3); }
+          @media (prefers-reduced-motion: no-preference){
+            .iui-page-header .iui-header-split-button .iui-button > .iui-label .iui-description{
+              transition:all 0.2s ease; } }
+      .iui-page-header .iui-header-split-button .iui-button > .iui-icon{
+        flex-shrink:0; }
+      .iui-page-header .iui-header-split-button .iui-button .iui-header-button-icon{
+        padding:4px;
+        width:16px;
+        height:16px;
+        border-radius:3px;
+        background-color:#EEF0F3;
+        fill:rgba(0, 0, 0, 0.4);
+        background-color:var(--iui-color-background-3);
+        fill:var(--iui-icons-color); }
+        @media (prefers-reduced-motion: no-preference){
+          .iui-page-header .iui-header-split-button .iui-button .iui-header-button-icon{
+            transition:width 0.2s ease-out, height 0.2s ease-out, margin 0.2s ease-out; } }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active svg{
+        fill:#008BE1;
+        fill:var(--iui-icons-color-primary); }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active, .iui-page-header .iui-header-split-button .iui-button.iui-active:hover{
+        box-shadow:0 2px 0 0 #008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        box-shadow:0 2px 0 0 var(--iui-color-foreground-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+        .iui-page-header .iui-header-split-button .iui-button.iui-active .iui-header-button-icon, .iui-page-header .iui-header-split-button .iui-button.iui-active:hover .iui-header-button-icon{
+          fill:#008BE1;
+          background-color:rgba(0, 139, 225, 0.1);
+          fill:var(--iui-icons-color-primary);
+          background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active .iui-label{
+        color:#008BE1;
+        color:var(--iui-color-foreground-primary); }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active:focus{
+        box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px, 0 2px 0 0 #008BE1;
+        box-shadow:var(--iui-focus-box-shadow), 0 2px 0 0 var(--iui-color-foreground-primary); }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active:focus:not(:focus-visible){
+        box-shadow:0 2px 0 0 #008BE1;
+        box-shadow:0 2px 0 0 var(--iui-color-foreground-primary); }
+      .iui-page-header .iui-header-split-button .iui-button.iui-active.iui-disabled, .iui-page-header .iui-header-split-button .iui-button.iui-active:disabled{
+        background-color:rgba(0, 0, 0, 0.05);
+        box-shadow:0 2px 0 0 rgba(0, 0, 0, 0.4);
+        background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05);
+        box-shadow:0 2px 0 0 rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4)); }
+        .iui-page-header .iui-header-split-button .iui-button.iui-active.iui-disabled .iui-label, .iui-page-header .iui-header-split-button .iui-button.iui-active:disabled .iui-label{
+          color:rgba(0, 0, 0, 0.2);
+          color:var(--iui-icons-color-actionable-disabled); }
+        .iui-page-header .iui-header-split-button .iui-button.iui-active.iui-disabled .iui-icon,
+        .iui-page-header .iui-header-split-button .iui-button.iui-active.iui-disabled svg, .iui-page-header .iui-header-split-button .iui-button.iui-active:disabled .iui-icon,
+        .iui-page-header .iui-header-split-button .iui-button.iui-active:disabled svg{
+          fill:rgba(0, 0, 0, 0.2);
+          fill:var(--iui-icons-color-actionable-disabled); }
+        .iui-page-header .iui-header-split-button .iui-button.iui-active.iui-disabled .iui-header-button-icon, .iui-page-header .iui-header-split-button .iui-button.iui-active:disabled .iui-header-button-icon{
+          background-color:rgba(0, 0, 0, 0.05);
+          background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05); }
+      .iui-page-header .iui-header-split-button .iui-button:disabled .iui-header-button-icon{
+        filter:grayscale(1) opacity(0.7); }
+      .iui-page-header.iui-slim > .iui-left .iui-button .iui-header-button-icon.iui-header-button-icon{
+        width:12px;
+        height:12px;
+        padding:2px; }
+      .iui-page-header.iui-slim > .iui-left .iui-button .iui-label .iui-description{
+        opacity:0;
+        height:0.1px;
+        width:0.1px;
+        margin:0;
+        padding:0; }
+    .iui-page-header .iui-header-split-button .iui-button:first-child{
+      padding-left:12px; }
+    .iui-page-header .iui-header-split-button.iui-active svg{
+      fill:#008BE1;
+      fill:var(--iui-icons-color-primary); }
+    .iui-page-header .iui-header-split-button.iui-active, .iui-page-header .iui-header-split-button.iui-active:hover{
+      box-shadow:0 2px 0 0 #008BE1;
+      background-color:rgba(0, 139, 225, 0.1);
+      box-shadow:0 2px 0 0 var(--iui-color-foreground-primary);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+      .iui-page-header .iui-header-split-button.iui-active .iui-header-button-icon, .iui-page-header .iui-header-split-button.iui-active:hover .iui-header-button-icon{
+        fill:#008BE1;
+        background-color:rgba(0, 139, 225, 0.1);
+        fill:var(--iui-icons-color-primary);
+        background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+    .iui-page-header .iui-header-split-button.iui-active .iui-label{
+      color:#008BE1;
+      color:var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-split-button.iui-active:focus{
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px, 0 2px 0 0 #008BE1;
+      box-shadow:var(--iui-focus-box-shadow), 0 2px 0 0 var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-split-button.iui-active:focus:not(:focus-visible){
+      box-shadow:0 2px 0 0 #008BE1;
+      box-shadow:0 2px 0 0 var(--iui-color-foreground-primary); }
+    .iui-page-header .iui-header-split-button.iui-active.iui-disabled, .iui-page-header .iui-header-split-button.iui-active:disabled{
+      background-color:rgba(0, 0, 0, 0.05);
+      box-shadow:0 2px 0 0 rgba(0, 0, 0, 0.4);
+      background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05);
+      box-shadow:0 2px 0 0 rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-4)); }
+      .iui-page-header .iui-header-split-button.iui-active.iui-disabled .iui-label, .iui-page-header .iui-header-split-button.iui-active:disabled .iui-label{
+        color:rgba(0, 0, 0, 0.2);
+        color:var(--iui-icons-color-actionable-disabled); }
+      .iui-page-header .iui-header-split-button.iui-active.iui-disabled .iui-icon,
+      .iui-page-header .iui-header-split-button.iui-active.iui-disabled svg, .iui-page-header .iui-header-split-button.iui-active:disabled .iui-icon,
+      .iui-page-header .iui-header-split-button.iui-active:disabled svg{
+        fill:rgba(0, 0, 0, 0.2);
+        fill:var(--iui-icons-color-actionable-disabled); }
+      .iui-page-header .iui-header-split-button.iui-active.iui-disabled .iui-header-button-icon, .iui-page-header .iui-header-split-button.iui-active:disabled .iui-header-button-icon{
+        background-color:rgba(0, 0, 0, 0.05);
+        background-color:rgba(var(--iui-color-foreground-body-rgb), 0.05); }
+    .iui-page-header .iui-header-split-button.iui-active .iui-button.iui-borderless, .iui-page-header .iui-header-split-button.iui-active .iui-button.iui-borderless:hover{
+      background-color:transparent; }
+    .iui-page-header .iui-header-split-button.iui-active .iui-button.iui-borderless::after{
+      display:none; }
+    .iui-page-header .iui-header-split-button.iui-active .iui-button:last-child:hover{
+      background-color:rgba(0, 139, 225, 0.1);
+      background-color:rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6)); }
+    .iui-page-header .iui-header-split-button.iui-active.iui-disabled .iui-button:last-child:hover{
+      background-color:transparent;
+      background-color:transparent; }
+  .iui-page-header > .iui-left > nav{
+    display:flex;
+    align-items:center;
+    height:100%; }
+  .iui-page-header > .iui-left,
+  .iui-page-header > .iui-left > nav{
+    overflow:hidden;
+    box-sizing:content-box;
+    margin-bottom:-4px;
+    padding-bottom:4px; }
+  .iui-page-header > .iui-left .iui-chevron{
+    fill:rgba(0, 0, 0, 0.4);
+    fill:var(--iui-icons-color);
+    display:inline-flex;
+    width:12px;
+    height:12px;
+    flex-shrink:0;
+    margin:0 4px; }
+    .iui-page-header > .iui-left .iui-chevron.iui-informational{
+      fill:#008BE1;
+      fill:var(--iui-icons-color-primary); }
+    .iui-page-header > .iui-left .iui-chevron.iui-positive{
+      fill:#53A21A;
+      fill:var(--iui-icons-color-positive); }
+    .iui-page-header > .iui-left .iui-chevron.iui-warning{
+      fill:#F18B12;
+      fill:var(--iui-icons-color-warning); }
+    .iui-page-header > .iui-left .iui-chevron.iui-negative{
+      fill:#D30A0A;
+      fill:var(--iui-icons-color-negative); }
+  .iui-page-header > .iui-center{
+    justify-content:center; }
+  .iui-page-header > .iui-right{
+    justify-content:flex-end; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-page-header > .iui-right .iui-user-icon,
+      .iui-page-header > .iui-right .iui-user-icon *{
+        transition:all 0.2s ease-out; } }
+  .iui-page-header .iui-button{
+    height:100%;
+    border-radius:0; }
+  .iui-page-header .iui-divider{
+    width:1px;
+    height:22px;
+    background-color:#DCE0E3;
+    background-color:var(--iui-color-background-4); }
+  .iui-page-header.iui-slim{
+    height:30px; }
+    .iui-page-header.iui-slim > .iui-left .iui-header-logo > .iui-label{
+      font-size:14px; }
+    .iui-page-header.iui-slim > .iui-left .iui-header-logo .iui-header-button-icon{
+      margin:0 28px; }
+    .iui-page-header.iui-slim > .iui-left .iui-header-button-icon{
+      width:16px;
+      height:16px;
+      margin:0 4px;
+      display:inline-flex; }
+    .iui-page-header.iui-slim > .iui-right .iui-user-icon{
+      width:24px;
+      height:24px; }
+      .iui-page-header.iui-slim > .iui-right .iui-user-icon > .iui-initials{
+        line-height:24px;
+        font-size:12px; }
+  @media (max-width: 768px){
+    .iui-page-header .iui-left .iui-button .iui-header-button-icon.iui-header-button-icon, .iui-page-header.iui-slim .iui-left .iui-button .iui-header-button-icon.iui-header-button-icon{
+      opacity:0;
+      height:0.1px;
+      width:0.1px;
+      margin:0;
+      padding:0; }
+    .iui-page-header .iui-left .iui-button .iui-header-button-icon + .iui-label, .iui-page-header.iui-slim .iui-left .iui-button .iui-header-button-icon + .iui-label{
+      margin-left:0; } }
+  @media (max-width: 1024px){
+    .iui-page-header .iui-left .iui-header-logo > .iui-label{
+      display:none; } }
+
+.iui-header-logo{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+  height:100%; }
+  a.iui-header-logo,
+  button.iui-header-logo, .iui-header-logo[role='button']{
+    cursor:pointer;
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align:baseline;
+    font-family:inherit;
+    background-color:unset;
+    color:unset; }
+    a.iui-header-logo:focus,
+    button.iui-header-logo:focus, .iui-header-logo[role='button']:focus{
+      box-shadow:none;
+      outline-offset:-1px;
+      outline:1px solid #008BE1;
+      outline:1px solid var(--iui-color-foreground-primary); }
+    a.iui-header-logo:focus:not(:focus-visible),
+    button.iui-header-logo:focus:not(:focus-visible), .iui-header-logo[role='button']:focus:not(:focus-visible){
+      outline:0; }
+    a.iui-header-logo:hover, a.iui-header-logo:focus,
+    button.iui-header-logo:hover,
+    button.iui-header-logo:focus, .iui-header-logo[role='button']:hover, .iui-header-logo[role='button']:focus{
+      background-color:rgba(0, 0, 0, 0.1);
+      background-color:rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6)); }
+      a.iui-header-logo:hover:not(:focus-visible):not(:hover), a.iui-header-logo:focus:not(:focus-visible):not(:hover),
+      button.iui-header-logo:hover:not(:focus-visible):not(:hover),
+      button.iui-header-logo:focus:not(:focus-visible):not(:hover), .iui-header-logo[role='button']:hover:not(:focus-visible):not(:hover), .iui-header-logo[role='button']:focus:not(:focus-visible):not(:hover){
+        background-color:#FFF;
+        background-color:var(--iui-color-background-1); }
+  .iui-header-logo .iui-header-button-icon{
+    margin:0 24px;
+    fill:rgba(0, 0, 0, 0.8);
+    fill:var(--iui-icons-color-actionable); }
+  .iui-header-logo > .iui-label{
+    margin-right:12px;
+    font-size:16px; }
+    @media (prefers-reduced-motion: no-preference){
+      .iui-header-logo > .iui-label{
+        transition:font-size 0.2s ease-out; } }

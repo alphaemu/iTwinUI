@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 11px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/* Light theme */
+hr {
+  border-top: 1px solid #C7CCD1;
+  margin: 11px 0;
+}
+
+/* Dark theme */
+.iui-theme-dark body hr {
+  border-color: #2D373C;
+}
+
+/* Custom high contrast theme */
+html.custom-theme {
+  --iui-color-foreground-body-rgb: 255, 0, 0;
+  --iui-color-foreground-accessory-rgb: 0, 255, 0;
+  --iui-color-foreground-primary-rgb: 0, 0, 255;
+}
+
+/** For sections in backstop tests */
+section[id^='demo'] {
+  width: -moz-fit-content; /* stylelint-disable */
+  width: fit-content;
+}

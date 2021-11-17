@@ -1,0 +1,180 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.iui-user-icon{
+  margin:0;
+  padding:0;
+  border:none;
+  vertical-align:baseline;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  margin:0;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none; }
+  .iui-user-icon > .iui-stroke{
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    margin:0;
+    border-radius:50%;
+    box-sizing:border-box;
+    box-shadow:inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow:inset 0 0 0 2px rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6)); }
+  .iui-user-icon > .iui-initials{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    margin:0;
+    border-radius:50%;
+    font-style:normal;
+    font-weight:600;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    background-color:#b1c856;
+    overflow:hidden;
+    color:#FFF;
+    color:var(--iui-color-foreground-accessory); }
+  .iui-user-icon > .iui-icon{
+    display:inline-flex;
+    width:50%;
+    height:50%;
+    position:absolute;
+    fill:#FFF;
+    fill:var(--iui-color-foreground-accessory); }
+  .iui-user-icon > img{
+    display:block;
+    position:absolute;
+    -o-object-fit:cover;
+       object-fit:cover;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    border-width:0;
+    border-radius:50%; }
+  .iui-user-icon > .iui-status{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    right:-2px;
+    bottom:-2px;
+    width:25%;
+    height:25%;
+    border-radius:50%;
+    border:2px solid #FFF;
+    background-color:#FFF;
+    box-shadow:inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+    border:2px solid var(--iui-color-background-1);
+    background-color:var(--iui-color-background-1);
+    box-shadow:inset 0 0 0 1px rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-3)); }
+    .iui-user-icon > .iui-status > .iui-status-symbol{
+      display:inline-flex;
+      fill:rgba(0, 0, 0, 0.4);
+      fill:var(--iui-icons-color);
+      width:calc(100% / 1.5);
+      height:calc(100% / 1.5); }
+    .iui-user-icon > .iui-status.iui-online, .iui-user-icon > .iui-status.iui-away, .iui-user-icon > .iui-status.iui-busy{
+      box-shadow:none; }
+      .iui-user-icon > .iui-status.iui-online > .iui-status-symbol, .iui-user-icon > .iui-status.iui-away > .iui-status-symbol, .iui-user-icon > .iui-status.iui-busy > .iui-status-symbol{
+        fill:#FFF;
+        fill:var(--iui-color-foreground-accessory); }
+    .iui-user-icon > .iui-status.iui-online{
+      background-color:#53A21A;
+      background-color:var(--iui-color-background-positive); }
+    .iui-user-icon > .iui-status.iui-away{
+      background-color:#F18B12;
+      background-color:var(--iui-color-background-warning); }
+    .iui-user-icon > .iui-status.iui-busy{
+      background-color:#D30A0A;
+      background-color:var(--iui-color-background-negative); }
+  .iui-user-icon.iui-user-icon-count > .iui-initials{
+    background-color:#EEF0F3;
+    color:rgba(0, 0, 0, 0.4);
+    background-color:var(--iui-color-background-3);
+    color:var(--iui-text-color-muted); }
+  .iui-user-icon.iui-user-icon-count:focus{
+    outline:none; }
+    .iui-user-icon.iui-user-icon-count:focus > .iui-stroke{
+      box-shadow:rgba(0, 139, 225, 0.2) 0 0 0 2px;
+      box-shadow:var(--iui-focus-box-shadow); }
+  .iui-user-icon.iui-user-icon-count:focus-visible{
+    outline:none; }
+  .iui-user-icon.iui-user-icon-count:focus:not(:focus-visible) > .iui-stroke{
+    box-shadow:inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+    box-shadow:inset 0 0 0 2px rgba(var(--iui-color-foreground-body-rgb), var(--iui-opacity-6)); }
+  .iui-user-icon.iui-user-icon{
+    width:32px;
+    height:32px; }
+    .iui-user-icon.iui-user-icon > .iui-initials{
+      line-height:32px;
+      font-size:16px; }
+  .iui-user-icon.iui-small{
+    width:24px;
+    height:24px; }
+    .iui-user-icon.iui-small > .iui-initials{
+      line-height:24px;
+      font-size:12px; }
+  .iui-user-icon.iui-large{
+    width:48px;
+    height:48px; }
+    .iui-user-icon.iui-large > .iui-initials{
+      line-height:48px;
+      font-size:18px; }
+  .iui-user-icon.iui-x-large{
+    width:64px;
+    height:64px; }
+    .iui-user-icon.iui-x-large > .iui-initials{
+      line-height:64px;
+      font-size:24px; }
+
+.iui-user-icon-list{
+  display:inline-flex;
+  flex-wrap:wrap; }
+  .iui-user-icon-list .iui-user-icon:not(:first-child){
+    margin-left:4px; }
+    .iui-user-icon-list .iui-user-icon:not(:first-child).iui-small{
+      margin-left:2px; }
+    .iui-user-icon-list .iui-user-icon:not(:first-child).iui-large{
+      margin-left:8px; }
+    .iui-user-icon-list .iui-user-icon:not(:first-child).iui-x-large{
+      margin-left:12px; }
+  .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child){
+    margin-left:-4px; }
+    .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child) .iui-initials{
+      box-shadow:0 0 0 4px #FFF;
+      box-shadow:0 0 0 4px var(--iui-color-background-1); }
+    .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child).iui-small{
+      margin-left:-2px; }
+      .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child).iui-small .iui-initials{
+        box-shadow:0 0 0 2px #FFF;
+        box-shadow:0 0 0 2px var(--iui-color-background-1); }
+    .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child).iui-large{
+      margin-left:-8px; }
+    .iui-user-icon-list.iui-stacked .iui-user-icon:not(:first-child).iui-x-large{
+      margin-left:-12px; }
+  @media (prefers-reduced-motion: no-preference){
+    .iui-user-icon-list.iui-stacked.iui-animated .iui-user-icon{
+      transition:margin-left 0.4s ease-out; } }
+  .iui-user-icon-list.iui-stacked.iui-animated:hover .iui-user-icon:not(:first-child){
+    margin-left:4px; }
+    .iui-user-icon-list.iui-stacked.iui-animated:hover .iui-user-icon:not(:first-child).iui-small{
+      margin-left:2px; }
+    .iui-user-icon-list.iui-stacked.iui-animated:hover .iui-user-icon:not(:first-child).iui-large{
+      margin-left:8px; }
+    .iui-user-icon-list.iui-stacked.iui-animated:hover .iui-user-icon:not(:first-child).iui-x-large{
+      margin-left:12px; }
